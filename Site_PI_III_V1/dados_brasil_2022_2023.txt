@@ -1,0 +1,23 @@
+
+
+
+**Resíduos Sólidos Urbanos (RSU) - 2023:**
+
+*   **Geração Total:** 80,96 milhões de toneladas/ano (aprox. 222 mil toneladas/dia)
+*   **Geração Per Capita:** 1,046 kg/habitante/dia (aprox. 382 kg/habitante/ano)
+*   **Coleta Total:** 75,6 milhões de toneladas/ano (aprox. 207 mil toneladas/dia)
+*   **Taxa de Coleta:** 93,4%
+*   **Disposição Final (Total):** 69,3 milhões de toneladas/ano (85,6% do gerado)
+*   **Disposição Final Inadequada (Lixões, etc.):** 28,8 milhões de toneladas/ano (41,5% do disposto)
+
+**Outros Resíduos - 2023:**
+
+*   **Resíduos de Construção e Demolição (RCD/RCC):** Dados não explicitamente encontrados na busca grep, verificar relatório completo se necessário.
+*   **Resíduos de Serviços de Saúde (RSS):** Dados não explicitamente encontrados na busca grep, verificar relatório completo se necessário.
+
+**Observações:**
+
+*   Fonte: ABREMA - Panorama dos Resíduos Sólidos no Brasil 2024 (Ano-base 2023)
+*   Os dados são anuais para 2023. O relatório não fornece detalhamento mensal.
+*   Houve aumento na taxa de reciclagem de 3,5% (2022) para 8% (2023) - informação de fontes secundárias (notícias sobre o relatório), verificar no PDF.
+

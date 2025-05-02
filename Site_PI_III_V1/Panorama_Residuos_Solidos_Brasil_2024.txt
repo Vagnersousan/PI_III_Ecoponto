@@ -1,0 +1,187 @@
+Panorama
+2024
+
+DOS RESÍDUOS SÓLIDOS NO BRASIL
+
+Preservação do meio ambiente
+e proteção da saúde
+NOSSO PRINCIPAL COMPROMISSO
+
+GESTÃO AMBIENTALMENTE
+ADEQUADA DE RESÍDUOS
+NOSSA MISSÃO
+
+Apresentação
+
+O Panorama dos Resíduos Sólidos no Brasil 2024 consolida-se como uma referência
+indispensável para todos os que atuam no setor ou buscam compreender as dinâmicas que
+envolvem resíduos sólidos e meio ambiente em nosso país. Como nas edições anteriores,
+a publicação traz um retrato abrangente, refletindo os avanços conquistados e os desafios
+que ainda persistem na busca por uma gestão ambientalmente responsável e economicamente sustentável.
+O ano de 2024 foi marcado por importantes eventos globais que reforçaram a temática
+ambiental e o papel estratégico dos resíduos sólidos. Entre os destaques, estão a COP 29,
+realizada em Baku, no Azerbaijão, e o encontro do G20, sediado no Rio de Janeiro. Nestes
+eventos, os líderes das principais economias do mundo discutiram a transição energética,
+a descarbonização da economia e a necessidade de ampliar a sustentabilidade global.
+No cenário nacional, a sanção da Lei do Combustível do Futuro representou um marco para o setor de resíduos sólidos, ao incentivar a produção de biometano de aterros
+sanitários, consolidando o papel da cadeia de resíduos como vetor estratégico para a
+descarbonização e a economia circular. O prazo para erradicação dos lixões no Brasil,
+encerrado em agosto de 2024, também foi um marco importante, embora os dados desta
+edição mostrem que essa meta ainda está distante de ser alcançada.
+Como novidade, o Panorama 2024 apresenta um detalhamento mais abrangente sobre o
+fluxo de resíduos no Brasil, incluindo não apenas temas como reciclagem, mas também
+processos como compostagem, produção de Combustível Derivado de Resíduos (CDR) e
+outras formas de valorização de materiais. Esse aprofundamento proporciona uma visão
+mais completa das estratégias disponíveis para transformar resíduos em recursos e reforça
+a importância de uma gestão integrada e inovadora.
+Com uma abordagem técnica e reflexiva, esta edição do Panorama reforça seu papel como
+uma ferramenta indispensável para governantes, gestores públicos, empresários, jornalistas, pesquisadores e demais interessados em transformar a realidade do setor. Ao unir
+informação de qualidade e uma visão estratégica, convidamos os leitores a contribuir para
+o avanço de práticas que promovam benefícios ambientais, sociais e econômicos, impulsionando o Brasil a um protagonismo cada vez maior nas soluções sustentáveis.
+Boa leitura!
+Pedro Maranhão
+Presidente
+
+sumário
+
+APRESENTAÇÃO................................................................................................................................................................ 7
+1. INTRODUÇÃO........................................................................................................................................... 11
+2. METODOLOGIA........................................................................................................................................ 15
+2.1. Ano-Base........................................................................................................................................................................... 16
+2.2 Resíduos Sólidos Urbanos............................................................................................................................................ 16
+2.3. Resíduos de Construção e Demolição.................................................................................................................... 21
+2.4. Resíduos de Serviços de Saúde.................................................................................................................................. 21
+2.5. Logística Reversa............................................................................................................................................................22
+2.6. Biometano: Combustível do Futuro no Setor de Resíduos...............................................................................22
+3. RESÍDUOS SÓLIDOS URBANOS............................................................................................................. 25
+3.1. Geração de RSU..............................................................................................................................................................26
+3.2. Fluxo de RSU....................................................................................................................................................................28
+3.3. Despesas com Serviços de Gerenciamento de RSU...........................................................................................36
+3.4 Empregos no Setor.........................................................................................................................................................39
+4. RESÍDUOS DE CONSTRUÇÃO E DEMOLIÇÃO E RESÍDUOS DE SERVIÇOS DE SAÚDE................... 43
+4.1. Resíduos de Construção e Demolição....................................................................................................................44
+4.2. Resíduos de Serviços de Saúde..................................................................................................................................45
+5. LOGÍSTICA REVERSA............................................................................................................................... 47
+5.1. Agrotóxicos, Seus Resíduos e Embalagens.............................................................................................................49
+5.2. Baterias de Chumbo Ácido..........................................................................................................................................50
+
+5.3. Eletroeletrônicos e Seus Componentes de Uso Doméstico............................................................................ 51
+5.4. Embalagens de Aço.......................................................................................................................................................52
+5.5. Embalagens de Vidro.....................................................................................................................................................53
+5.6. Embalagens em Geral...................................................................................................................................................53
+5.7. Embalagens de Óleos Lubrificantes .........................................................................................................................54
+5.8. Óleos Lubrificantes Usados ou Contaminados (OLUC).....................................................................................55
+5.9. Lâmpadas Fluorescentes, de Vapor de Sódio e Mercúrio e de Luz Mista......................................................56
+5.10. Latas de Alumínio para Bebidas................................................................................................................................ 57
+5.11. Medicamentos, Seus Resíduos e Embalagens.....................................................................................................58
+5.12. Pilhas e Baterias.............................................................................................................................................................59
+5.13. Pneus Inservíveis...........................................................................................................................................................59
+5.14. Discussão....................................................................................................................................................................... 60
+6. BIOMETANO: COMBUSTÍVEL DO FUTURO NO SETOR DE RESÍDUOS............................................ 63
+6.1. O que é o Biometano? .................................................................................................................................................64
+6.2. Legislação e Iniciativas..................................................................................................................................................65
+6.3. Exploração do Biometano de RSU no Brasil..........................................................................................................67
+6.4. Potencial de Exploração do Biometano de RSU no Brasil em Cenário Tangível........................................69
+6.5. Potencial de Geração de Empregos com a Produção do Biometano de RSU no Brasil..........................74
+6.6. Investimentos para a Geração de Biometano de RSU no Brasil......................................................................75
+7. CONCLUSÃO............................................................................................................................................. 77
+INSTITUCIONAL............................................................................................................................................................... 81
+
+10 | PANORAMA DOS RESÍDUOS SÓLIDOS NO BRASIL 2024
+
+01
+
+ABREMA - ASSOCIAÇÃO BRASILEIRA DE RESÍDUOS E MEIO AMBIENTE | 11
+
+Introdução
+
+12 | PANORAMA DOS RESÍDUOS SÓLIDOS NO BRASIL 2024
+
+1. Introdução
+
+A gestão de resíduos sólidos urbanos (RSU) não é uma tarefa simples. A discussão mais
+aprofundada do tema abrange questões ambientais, logísticas, econômicas, comportamentais e de padrões de consumo. E quanto maior a complexidade do assunto, mais
+necessária se torna uma discussão com base em dados. Uma base de dados completa e
+confiável possibilita um melhor entendimento do cenário, com a identificação dos reais
+problemas a serem solucionados. A análise objetiva desses dados indica quais soluções
+terão maior impacto no gerenciamento de RSU e quais devem ser priorizadas – e onde.
+Essa análise também permite estimar os custos e investimentos necessários para que as soluções escolhidas sejam implementadas e tenham continuidade. Além disso, somente com
+dados é possível saber se as metas determinadas pelos planos de gerenciamento de RSU
+estão sendo atingidas. O Panorama dos Resíduos Sólidos no Brasil tem como objetivo contribuir para a formação dessa base de dados tão necessária, fornecendo dados analisados
+rigorosamente, que representem a realidade atual do gerenciamento de resíduos no país.
+O Panorama 2024 está dividido em sete capítulos, sendo esta introdução o primeiro. No
+Capítulo 2 é apresentada a metodologia utilizada para obtenção dos dados publicados, o
+que inclui as fontes das informações e as hipóteses e limitações dos modelos adotados.
+Nesse capítulo também é discutida a correção feita pelo IBGE nos números do Censo
+2022 referentes à população brasileira, que são utilizados para o cálculo da quantidade
+total de RSU gerada no país. As projeções feitas nesta edição seguem o mesmo raciocínio
+das edições anteriores, com as necessárias atualizações e calibrações dos valores para
+representação adequada da realidade.
+No terceiro capítulo são apresentadas as projeções mais recentes dos dados de gerenciamento de resíduos sólidos urbanos (RSU) no Brasil. Além dos dados de geração, coleta e
+disposição final, nesta edição também são apresentadas, pela primeira vez, estimativas das
+quantidades de RSU encaminhadas para reciclagem, compostagem e preparo de combustível derivado de resíduos urbanos (CDRU). A análise combinada desses processos resulta
+na apresentação de um fluxo inédito dos RSU no Brasil, que expõe a complexidade do
+gerenciamento desses resíduos.
+O Capítulo 4 traz informações, em âmbito nacional e regional, sobre a geração de resíduos de construção e demolição (RCD) e resíduos de serviços de saúde (RSS) oriundos de
+internações e procedimentos cirúrgicos, que em 2023 ainda foram impactados pela pandemia de Covid-19. Esses resíduos têm origem e características específicas, e necessitam
+de atenção especial na sua coleta e destinação.
+
+ABREMA - ASSOCIAÇÃO BRASILEIRA DE RESÍDUOS E MEIO AMBIENTE | 13
+
+Dados referentes aos sistemas de logística reversa existentes no Brasil são apresentados
+no Capítulo 5. Os resultados publicados no Panorama reúnem, em um só documento,
+informações de entidades gestoras e instituições responsáveis pelo acompanhamento da logística reversa de diversos materiais, bem como dados do Ministério do Meio
+Ambiente e Mudança do Clima, o que possibilita o acompanhamento da evolução desses
+sistemas no país.
+Na edição de 2024, o Panorama volta a ter um capítulo temático – Capítulo 6 – que, dada a
+necessidade de descarbonização da economia e aproveitando a recente aprovação da Lei
+do Combustível do Futuro (Lei nº 14.993/2024), discute o potencial brasileiro de produção
+de biometano a partir de RSU em um cenário tangível. Nesse capítulo são apresentadas a
+legislação vigente sobre o tema e informações sobre a produção nacional atual de biometano de RSU, além de estimativas dos potenciais de exploração desse biocombustível no
+país e da geração de empregos nessa atividade.
+Por fim, no Capítulo 7 são apresentadas considerações finais e uma breve análise dos
+dados publicados, com os pontos de vista da ABREMA em relação aos desafios e avanços
+do setor no Brasil.
+
+14 | PANORAMA DOS RESÍDUOS SÓLIDOS NO BRASIL 2024
+
+02
+
+ABREMA - ASSOCIAÇÃO BRASILEIRA DE RESÍDUOS E MEIO AMBIENTE | 15
+
+metodologia
+As informações apresentadas no Panorama dos Resíduos Sólidos no Brasil são resultado
+de um levantamento de dados publicados por órgãos públicos e entidades ligadas ao
+setor de limpeza urbana e gerenciamento de resíduos sólidos no país. Esses dados são
+analisados levando-se em consideração indicadores econômicos e sociais do período
+correspondente e, quando necessário, são submetidos a análises estatísticas e projeções
+de tendências históricas, para que representem a realidade dos resíduos sólidos no Brasil
+da melhor forma possível. Este capítulo é uma versão condensada da metodologia utilizada na elaboração do Panorama 2024, e cita as fontes da informação apresentada, bem
+como as variáveis e os indicadores envolvidos na análise dos dados.
+
+16 | PANORAMA DOS RESÍDUOS SÓLIDOS NO BRASIL 2024
+
+2.1. ANO-BASE
+Os dados apresentados no Panorama 2024 referem-se ao ano-base 2023. A população
+brasileira foi estimada com base na população corrigida de 2022, de 210.862.983 habitantes, divulgada pelo Instituto Brasileiro de Geografia e Estatística (IBGE) em agosto de
+2024. A esse valor foi somado o número de nascimentos e subtraído o número de óbitos
+registrados no país em 2023, resultando em uma população de 211.935.869 habitantes.
+Os indicadores socioeconômicos utilizados como referência correspondem aos valores
+anuais de 2023, divulgados no primeiro semestre de 2024. Os dados de logística reversa,
+também referentes ao ano de 2023, foram disponibilizados ao longo de 2024. Dados não
+disponíveis para o ano-base da publicação, mas disponíveis para anos anteriores, tiveram
+suas tendências temporais analisadas e suas séries históricas foram extrapoladas para contemplar o ano de interesse.
+A exceção é para os dados apresentados no Capítulo 6 - Biometano: Combustível do
+Futuro no Setor de Resíduos. Esses dados retratam o atual contexto do Brasil em relação
+à produção e ao consumo desse combustível, portanto as informações apresentadas são
+referentes ao ano-base de 2024.
+
+2.2 RESÍDUOS SÓLIDOS URBANOS
+2.2.1. Geração
+Entre os anos de 2010 e 2018, a geração de resíduos sólidos urbanos (RSU) per capita
+apresentada no Panorama foi estimada com base em resultados de entrevistas realizadas
+anualmente com uma amostra de 400 a 450 municípios. Os resultados obtidos ao longo
+desses anos foram usados na elaboração de uma série histórica sólida que permitiu um
+exercício de correlação com indicadores socioeconômicos e demográficos a fim de encontrar aquele que, além de apresentar um alto coeficiente de correlação com a geração
+de RSU per capita, também explicasse de forma coerente as estimativas obtidas. A vari
+(Content truncated due to size limit. Use line ranges to read in chunks)

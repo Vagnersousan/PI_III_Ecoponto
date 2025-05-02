@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Cadê o Ecoponto</title>
+    <link rel="icon" type="image/png" href="imagens/Logo Colorido Redondo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="watermark"></div>
+    <style>
+    .btn-primary {
+            background-color: #28a745; /* Verde do Bootstrap */
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838; /* Verde mais escuro */
+            border-color: #218838;
+        }
+    /* Estilos para o fundo */
+        body {
+            background-color: #d4edda; /* Verde mais claro */
+            overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+            color: #333; /* Cor do texto */
+            font-family: 'Arial', sans-serif; /* Fonte do texto */
+        }
+        /* Estilos para os vídeos */
+        .embed-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .embed-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        @media only screen and (min-width: 768px) {
+            #content-wrap {
+                margin-bottom: 5rem;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            #content-wrap {
+                margin-bottom: 1rem;
+            }
+        }
+        /* Responsividade da imagem */
+        @media (max-width: 768px) {
+            .img-fluid {
+                width: 100%; /* Ajuste a largura da imagem para 100% */
+                height: auto; /* Mantenha a proporção da imagem */
+            }
+        }
+       
+        /* Estilos para o fundo */
+        body {
+            background-color: #d4edda; /* Verde mais claro */
+            overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+            color: #333; /* Cor do texto */
+            font-family: 'Arial', sans-serif; /* Fonte do texto */
+        }
+    </style>
+      <header style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a href="cadastro.html"><button id="inscreverBtn" class="btn btn-primary ml-auto mr-2">Cadastre-se</button></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte correto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no Ecoponto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Dados_Abertos.html">Dados Abertos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="page-container"> 
+        <div id="content-wrap">
+            <main class="main-content">
+                <section id="greeting" class="text-center">
+                    <!-- Conteúdo da saudação -->
+                    <h1>Bem-vindo ao site Cadê o Ecoponto</h1>
+                    <div>
+                        <p>Fez uma pequena reforma, trocou algum móvel da sua casa ou precisa descartar algum lixo que não é
+                            considerado comum e não sabe o que fazer?
+                            O site cadê o ecoponto pode te ajudar!
+                            Pensando em dar mais visibilidade para todas as pessoas que precisam realizar esse tipo de descarte,
+                            desenvolvemos esse site para que você possa localizar o ecoponto mais próximo da sua casa, além de
+                            entender quais são os materiais aceitos e os horários de funcionamento.
+                            Então acesse e faça mais pelo meio ambiente.</p>
+                    </div>
+                </section>
+                <div class="container">
+                    <h2 class="mt-4">O que é o Ecoponto?</h2>
+                    <p>Conheça um pouco sobre o que é, e como funcionam os Ecopontos espalhados pela Cidade de SP no vídeo
+                        abaixo:</p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="20" height="20" src="https://www.youtube.com/embed/qDLXRLqbjoA?si=mfwx0MCdvGoZeAEh"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p>Os Ecopontos são locais destinados à coleta de diversos tipos de resíduos que não são recolhidos
+                        pela coleta domiciliar regular. 
+                        Esses pontos servem para evitar que o lixo seja descartado de forma irregular, como em terrenos
+                        vazios, rios e outros locais que causam danos ao meio ambiente.
+                        A partir do momento em que o material é descartado, o Ecoponto se encarrega de fazer o tratamento
+                        correto, garantindo a destinação final adequada.</p>
+                    <p>No entanto, é importante observar que os Ecopontos não aceitam todos os tipos de resíduos.
+                        Alguns materiais como pilhas, baterias, lâmpadas fluorescentes, medicamentos e outros resíduos
+                        especiais devem ser descartados em locais específicos, como os pontos de coleta seletiva ou
+                        postos de saúde.</p>
+                </div>
+            </main>
+        </div>
+        <footer style="background-color: black; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        &copy; 2025 Cadê o Ecoponto.
+    </footer>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

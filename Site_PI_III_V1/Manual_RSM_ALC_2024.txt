@@ -1,0 +1,222 @@
+MANUAL DE REPORTE
+DE ESTADÍSTICAS
+
+Gestión de flujo de materiales:
+Residuos Sólidos Municipales (RSM)
+en América Latina y el Caribe.
+
+Edición 2024
+Versión 1.0
+
+Índice
+Prólogo ........................................................................................................................................4
+Introducción ................................................................................................................................7
+1. El Hub de residuos sólidos y economía circular ....................................................................... 10
+2. Aspectos conceptuales y metodológicos ................................................................................ 13
+3. Gestión de la información ....................................................................................................... 17
+3.1. Recolección y procesamiento de la información ............................................................... 19
+3.1.1. Definición y características principales del proceso ....................................................... 19
+3.1.2. Lineamientos específicos y metodología ....................................................................... 19
+3.1.3. Roles y responsabilidades ............................................................................................. 22
+3.1.4. Productos: entradas y salidas........................................................................................ 23
+3.2. Análisis y reporte de la calidad de la información .............................................................. 23
+3.2.1. Definición y características principales del proceso ....................................................... 23
+3.2.2. Lineamientos específicos y metodología ....................................................................... 23
+3.2.3. Roles y responsabilidades ............................................................................................. 27
+3.2.4. Productos: entradas y salidas........................................................................................ 27
+3.3. Transmisión de los datos al Hub ....................................................................................... 28
+3.3.1. Definición y características principales del proceso ....................................................... 28
+3.3.2. Lineamientos específicos y metodología para el reporte................................................. 28
+3.3.3. Roles y responsabilidades ............................................................................................. 29
+3.3.4. Productos: entradas y salidas........................................................................................ 29
+3.4. Consolidación de la base de datos regional ...................................................................... 30
+3.4.1. Definición y características principales del proceso ....................................................... 30
+3.4.2. Lineamientos específicos y metodología ....................................................................... 30
+3.4.3. Roles y responsabilidades ............................................................................................. 31
+3.4.4. Productos: entradas y salidas........................................................................................ 31
+3.5. Difusión de los resultados y retroalimentación ................................................................. 32
+3.5.1. Definición y características principales del proceso ....................................................... 32
+
+Página 1 de 108
+
+3.5.2. Lineamientos específicos y metodología ....................................................................... 32
+3.5.3. Roles y responsabilidades ............................................................................................. 32
+3.5.4. Productos: entradas y salidas........................................................................................ 33
+4. Metadatos de los indicadores del Hub .................................................................................... 33
+Referencias ............................................................................................................................... 36
+Anexos ....................................................................................................................................... 45
+Anexo 1. Fichas de los indicadores ................................................................................................ 45
+Indicador 1. Generación per cápita ............................................................................................. 45
+Indicador 2. Residuos sólidos municipales recolectados ............................................................... 48
+Indicador 3. Residuos sólidos municipales no recolectados........................................................... 51
+Indicador 4. Disposición final inadecuada.................................................................................... 54
+Indicador 5. Relleno sanitario ..................................................................................................... 58
+Indicador 6. Reciclaje ............................................................................................................... 61
+Indicador 7. Compostaje ........................................................................................................... 64
+Indicador 8. Digestión anaerobia ................................................................................................ 67
+Indicador 9. Coprocesamiento ................................................................................................... 70
+Indicador 10. Termovalorización ................................................................................................ 72
+Indicador 11. Destino no identificado .......................................................................................... 75
+Indicador 12. Emisiones de gases de efecto invernadero del sector de residuos sólidos municipales .. 78
+Indicador 13. Ingresos por tasas o tarifas..................................................................................... 80
+Indicador 14. Costo de la gestión de residuos sólidos municipales ................................................. 83
+Indicador 15. Trabajadores ........................................................................................................ 86
+Indicador 16. Trabajadores de género femenino ........................................................................... 88
+Indicador 17. Trabajadores de género no binario ........................................................................... 91
+Indicador 18. Cantidad de datos reportados ................................................................................ 94
+Indicador 19. Calidad de los datos .............................................................................................. 95
+Glosario ................................................................................................................................... 100
+
+Página 2 de 108
+
+Página 3 de 108
+
+Prólogo
+América Latina y el Caribe enfrenta un desafío crítico en la gestión de residuos sólidos
+municipales. Aproximadamente la mitad de estos residuos no se recolecta o se maneja de
+manera inadecuada, lo cual genera serios problemas de salud pública, contaminación
+ambiental y pérdidas económicas considerables, en especial para las comunidades que
+habitan cerca de los sitios de disposición final. Estos problemas se originan, en gran
+medida, en un modelo de economía lineal extractiva que, junto al crecimiento demográfico,
+ejerce una presión insostenible sobre los recursos naturales de la región.
+Se estima que se aprovecha apenas el 4% de los residuos sólidos municipales. Sin embargo,
+es probable que estas cifras estén subestimadas debido a la falta de datos consolidados.
+En este contexto, disponer de información precisa y confiable se convierte en un pilar
+fundamental para la toma de decisiones y para facilitar la transición hacia una economía
+circular.
+Uno de los principales retos que enfrenta la región es la escasez de datos y estadísticas
+sistemáticas que permitan monitorear los avances en la gestión de residuos. Es imperativo
+que los datos sobre residuos sólidos municipales se integren a las estadísticas nacionales,
+con el fin de identificar oportunidades de mejora y proponer soluciones adecuadas. En este
+sentido, el Hub de residuos sólidos y economía circular, administrado por el Banco
+Interamericano de Desarrollo (BID), es un portal de datos abiertos que agrupa y organiza
+información sobre la gestión de residuos sólidos y su relación con la economía circular, los
+Objetivos de Desarrollo Sostenible (ODS) y el cambio climático en los países de América
+Latina y el Caribe, y que se posiciona como una herramienta esencial para la transformación
+digital del sector, al fortalecer la capacidad de acción de los gobiernos mediante sistemas
+de monitoreo y datos abiertos.
+Las innovaciones tecnológicas, como la inteligencia artificial, están revolucionando la
+forma en que se gestiona la información relacionada con los residuos. Estas herramientas
+permiten mejorar la transparencia de los sistemas de información, automatizar procesos,
+detectar vertederos y medir gases de efecto invernadero, por lo cual facilitan la rendición de
+cuentas y el diseño de soluciones más eficaces.
+Si bien los desafíos son significativos, contemplar la colaboración como elemento esencial
+permitirá hacer avances sustanciales. Con el respaldo del Programa de las Naciones Unidas
+para el Medio Ambiente y el Global Methane Hub y en colaboración con aliados estratégicos
+y los países de América Latina y el Caribe, el Hub de residuos sólidos y economía circular
+trabaja para robustecer esta iniciativa y consolidar la herramienta como un referente clave
+Página 4 de 108
+
+en la región, en el camino hacia la digitalización y el desarrollo sostenible en la gestión de
+residuos sólidos y la economía circular.
+
+Sergio Campos
+Jefe de la División de Agua y Saneamiento
+Banco Interamericano de Desarrollo
+
+Página 5 de 108
+
+Abreviaturas
+ALC
+
+América Latina y el Caribe
+
+BID
+
+Banco Interamericano de Desarrollo
+
+ONE
+
+oficina nacional de estadística
+
+ODS
+
+objetivos de desarrollo sostenible
+
+PNUMA
+
+Programa de las Naciones Unidas para el Medio Ambiente
+
+RSM
+
+residuos sólidos municipales
+
+SCAE
+
+Sistema de Contabilidad Ambiental y Económica
+
+TRG
+
+total de residuos generados
+
+Página 6 de 108
+
+Introducción
+América Latina y el Caribe (ALC) enfrenta desafíos significativos en la gestión de residuos
+sólidos, en particular, debido a la falta de datos y estadísticas de calidad. Esta carencia
+afecta la toma de decisiones en áreas clave, como la formulación de políticas públicas y las
+oportunidades de inversión. En este contexto, el Hub de residuos sólidos y economía
+circular se presenta como una herramienta estratégica fundamental para apoyar a los
+países de la región en la solución de este reto.
+El Hub de residuos sólidos y economía circular (en adelante Hub) es un portal de datos
+abiertos que agrupa y organiza información sobre la gestión de residuos sólidos y su relación
+con la economía circular, los objetivos de desarrollo sostenible (ODS) y el cambio climático
+en los países de ALC. Su propósito es apoyar a los países de la región en su transición hacia
+la transformación digital, al mejorar la calidad y la disponibilidad de la información sectorial,
+y actuar como un punto de encuentro regional para fortalecer las estadísticas en materia de
+residuos y economía circular. Actualmente, el Hub cuenta con tres módulos: Gestión de
+flujo de materiales - residuos sólidos municipales (RSM), Comercio internacional de
+residuos sólidos y materias primas secundarias y Economía circular de plásticos.
+El presente manual aborda el módulo Gestión de flujo de materiales - residuos sólidos
+municipales (RSM) del Hub, que es el resultado de un proceso de mejora continua que
+comenzó con la identificación de la información disponible en los 26 países miembros
+prestatarios del Banco Interamericano de Desarrollo (BID). Este proceso incluyó la adopción
+de mejores prácticas en la implementación de sistemas de información sobre residuos
+sólidos, la recopilación de datos a nivel regional y el procesamiento de esta información
+para establecer una línea de base para 2021. Los metadatos (fichas técnicas) de cada
+indicador son el resultado de un análisis comparativo (benchmarking) realizado a partir de
+publicaciones de distintas instituciones, de las oficinas nacionales de estadística y otras
+instituciones sectoriales de algunos países de la región, de Eurostat, la oficina estadística
+de la Unión Europea (Eurostat, 2013), y de los reportes de la Agencia de Protección
+Ambiental de Estados Unidos (EPA) (EPA, 2020). El Hub fue lanzado oficialmente en 2023,
+por medio del sitio web https://hubresiduoscirculares.org/, donde se pueden consultar
+datos actualizados sobre la gestión de RSM y el flujo de materiales de la línea de base. En
+2024 se incorporó la aplicación de reporte, mediante la cual los países de ALC agregan sus
+datos e indicadores directamente en el portal, lo cual facilita el intercambio de datos,
+mantiene actualizada la información del Hub y amplía el alcance a todos los países de la
+región.
+
+Página 7 de 108
+
+El objetivo de este manual es guiar a los puntos focales de las entidades oficiales de los
+países de ALC en sus esfuerzos por producir datos y estadísticas de calidad y reportar esta
+información al Hub. El manual será actualizado periódicamente, en función de las
+observaciones y los comentarios recabados en la experiencia práctica.
+El conjunto de procesos para el reporte de información al Hub incluye la recolección y el
+procesamiento de datos e indicadores, el análisis y los controles de calidad asociados a la
+información, la transferencia de esta información al Hub y su publicación en el portal, una
+vez que la información fue aprobada por el administrador del Hub.
+Este manual fue diseñado como una herramienta accesible y útil para todos los actores
+involucrados en la gestión de residuos sólidos y la economía circular, que proporciona una
+base sólida para la mejora y la armonización progresivas de la información necesaria para
+la toma de decisiones informadas, el desarrollo de estrategias efectivas, la medición del
+impacto y el monitoreo de la evolución sectorial.
+El manual está organizado en cuatro capítulos y dos anexos. El capítulo 1 contiene
+información básica del Hub: qué es, cómo funciona, cuáles son sus objetivos y cómo se
+recopilan y gestionan los datos para asegurar la integridad y calidad de la información de
+manera periódica. También contempla la descripción de los roles de los distintos usuarios
+del Hub, como administradores, usuarios de reporte, aliados y usuarios de consulta.
+El capítulo 2 detalla la metodología utilizada para el cálculo y el análisis de los residuos
+sólidos municipales. Se basa en el Sistema de contabilidad ambiental y económica (SCAE)
+y abarca desde la generación y la recolección de residuos hasta su utilización y acumulación
+en sitios de disposición final. Este capítulo proporciona un marco conceptual claro para
+medir y hacer seguimiento de flujos de materiales e incluye ecuaciones y gráficos que
+ilustran los procesos y cálculos involucrados en la gestión de residuos.
+El capítulo 3 cubre el proceso completo de gestión de datos en el Hub, desde la recolección
+inicial hasta la difusión de resultados. Detalla cómo los países de ALC reportan y validan sus
+datos, los procedimientos para asegurar la calidad y la consistencia de la información y el
+proceso de consolidación a nivel regional. Además, comprende los detalles sobre cómo se
+procesa, se verifica y se comparte la información, con el fin de suministrar una visión precisa
+y actualizada de la gestión de residuos y la economía circular en la región.
+En el capítulo 4 se especifican los metadatos1 de l
+(Content truncated due to size limit. Use line ranges to read in chunks)

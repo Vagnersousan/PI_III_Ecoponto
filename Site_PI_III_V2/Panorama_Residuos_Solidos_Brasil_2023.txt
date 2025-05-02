@@ -1,0 +1,745 @@
+anos-base de 2021 e 2022, respeitando a diferença de geração de resíduos observada em
+cada tipo de internação.
+
+2.8. LOGÍSTICA REVERSA
+Os dados de logística reversa apresentados no Panorama são obtidos diretamente com as
+entidades gestoras responsáveis pelos principais sistemas de logística reversa implementados no país. Esses dados, disponibilizados publicamente, são resumidos e apresentados
+no Panorama junto a resultados de anos anteriores, para que se possa observar a evolução
+de cada sistema.
+
+18 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+03
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 19
+
+RESÍDUOS
+SÓLIDOS URBANOS
+
+20 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+3.1. GERAÇÃO DE RSU
+Estima-se que o brasileiro tenha gerado uma média de 1,04 kg de RSU por dia em 2022.
+Aplicando esse valor à população brasileira divulgada pelo Censo Demográfico 2022, estima-se que aproximadamente 77,1 milhões de toneladas de RSU foram geradas no país em
+2022. Isso corresponde a mais de 211 mil toneladas de resíduos geradas por dia, ou cerca
+de 380 kg/habitante/ano.
+Regionalmente, o Sudeste apresenta a maior geração de RSU per capita, com cerca de 449
+kg gerados por habitante em 2022. Na outra ponta encontra-se a região Sul, com uma geração anual de 284 kg de RSU por habitante. O Sudeste também é responsável pela geração
+de 104 mil toneladas diárias de RSU, o que representa aproximadamente 50% da geração
+nacional. Por outro lado, a região que menos contribui para o total nacional é a Norte, responsável pela geração de 15 mil toneladas diárias, o que equivale a 7,3% dos RSU do país.
+
+Comparando a geração de resíduos no Brasil entre 2021 e 2022, observa-se uma redução
+de 2% na geração de RSU per capita. Na projeção apresentada no Panorama, esse resultado
+reflete diretamente a diminuição do poder de compra da população como um todo, decorrente do aumento das taxas de desemprego observadas nos estados. Uma redução na
+geração de resíduos em 2022 também pode ser explicada por uma mudança nos hábitos
+de consumo advinda do fim do isolamento social: grande parte do consumo de alimentos
+que se dava em casa, voltou para a rua. Isso não apenas reduz a necessidade de embalagens para viagem (delivery), como reduz a geração de resíduos domiciliares, que voltam a
+ser gerados em estabelecimentos comerciais. Boa parte desses são considerados grandes
+geradores, principalmente em grandes centros urbanos, e por isso não são incluídos nas
+projeções do Panorama.
+
+Figura 3.1. Geração de RSU no Brasil em 2022*
+
+380
+
+kg de RSU gerados por
+habitante em 2022
+
+77.076.428
+
+*Projeções corrigidas com base no Censo 2022
+
+toneladas de RSU
+geradas em 2022
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 21
+
+Figura 3.2. Participação regional na geração de RSU em 2022 *
+
+Norte
+7,3%
+5.600.646 ton.
+
+Nordeste
+24,6%
+18.952.693 ton.
+
+Centro-Oeste
+7,7%
+5.927.824 ton.
+
+Sudeste
+49,4%
+38.093.464 ton.
+
+Sul
+11,0%
+8.501.801 ton.
+
+*Projeções corrigidas com base no Censo 2022
+
+22 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+Figura 3.3. Geração de RSU per capita por grande região - Comparativo 2021 e 2022 (kg/hab/dia)
+
+0,895
+
+Norte
+
+0,884
+0,968
+
+Nordeste
+
+0,950
+1,014
+
+CentroOeste
+
+0,997
+1,254
+
+Sudeste
+
+1,230
+0,802
+
+Sul
+
+0,778
+1,061
+
+Brasil
+
+1,040
+
+2021
+
+2022
+
+3.2. COLETA DE RSU
+Estima-se que 93% dos resíduos gerados no Brasil em 2022 tenham sido devidamente coletados, o que equivale a mais de 196 mil toneladas de RSU coletadas diariamente. Enquanto essa quantidade pode parecer alta, deve-se lembrar que os 7% não coletados equivalem
+a mais de 5 milhões de toneladas que têm uma destinação final inadequada, oferecendo
+riscos ao meio ambiente e à saúde pública.
+Regionalmente, as projeções mostram que Sul, Sudeste e Centro-Oeste estão acima da
+média nacional de coleta, com 97,0%, 98,6% e 94,9% dos respectivos resíduos coletados.
+Norte e Nordeste coletam aproximadamente 83% dos RSU gerados, evidenciando as diferenças regionais na gestão de resíduos sólidos no país.
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 23
+
+Figura 3.4. Coleta de RSU no Brasil em 2022*
+
+353
+
+71.729.841
+
+kg de RSU coletados por
+habitante em 2022
+
+toneladas de RSU
+coletadas em 2022
+
+*Projeções corrigidas com base no Censo 2022
+
+Figura 3.5. Percentual de RSU coletados por grande região em 2022 *
+
+Norte
+82,8%
+
+Nordeste
+82,7%
+
+Centro-Oeste
+94,9%
+Sudeste
+98,6%
+
+Brasil
+93,0%
+Sul
+97,0%
+
+*Projeções corrigidas com base no Censo 2022
+
+24 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+Figura 3.6. Coleta de RSU per capita por grande região - Comparativo 2021 e 2022 (kg/hab/dia)
+
+0,733
+
+Norte
+
+0,732
+0,793
+
+Nordeste
+
+0,785
+0,958
+
+CentroOeste
+
+0,947
+1,232
+
+Sudeste
+
+1,213
+0,772
+
+Sul
+
+0,755
+0,982
+
+Brasil
+
+0,968
+2021
+
+2022
+
+3.3. COLETA SELETIVA
+O Brasil ainda está em fase inicial de implementação da coleta seletiva porta a porta nos
+sistemas de gestão municipal de resíduos sólidos. Segundo dados do Diagnóstico Temático
+Manejo de Resíduos Sólidos Urbanos (SNIS 2021), a coleta seletiva porta a porta atende 69,7
+milhões de habitantes.
+No entanto, quando observada a média da população urbana atendida, por município, a
+coleta seletiva porta a porta alcança apenas 14,7% dos habitantes. Os municípios da região
+Sul apresentam a maior média de cobertura, atendendo a 31,9% da população urbana. A
+região Nordeste apresenta a menor abrangência média municipal de coleta seletiva porta
+a porta, atendendo somente 1,9% da população urbana.
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 25
+
+Figura 3.7. Média, por município, da população urbana atendida com coleta seletiva porta a porta
+
+14,7%
+
+85,3%
+
+Não possui coleta seletiva
+
+Possui coleta seletiva
+
+Fonte: Diagnóstico Temático Manejo de Resíduos Sólidos Urbanos (SNIS 2021).
+
+Figura 3.8. Média, por município, da população urbana atendida com coleta seletiva porta a porta
+por região
+
+Norte
+
+2,0%
+
+Nordeste
+
+1,9%
+
+CentroOeste
+Sudeste
+
+11,6%
+20,3%
+31,9%
+
+Sul
+Fonte: Diagnóstico Temático Manejo de Resíduos Sólidos Urbanos (SNIS 2021).
+
+26 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+3.4. DISPOSIÇÃO FINAL DE RSU
+A Política Nacional dos Resíduos Sólidos (Lei nº 12.305, de 2 de agosto de 2010) determina
+que, após a submissão dos RSU aos tratamentos e destinações disponíveis, os resíduos restantes, ou rejeitos, devam ser enviados para uma disposição final ambientalmente adequada. Essa disposição final deve observar normas operacionais específicas de modo a evitar
+danos ou riscos à saúde pública e à segurança e a minimizar impactos ambientais adversos.
+A instalação que se enquadra nessa definição de disposição final é o aterro sanitário, uma
+obra de engenharia que inclui impermeabilização de base, coleta e aproveitamento ou
+queima de biogás, drenagem, coleta e tratamento de chorume, além de contar com monitoramento ambiental e geotécnico da área. Lixões, aterros controlados, valas, vazadouros e
+áreas similares não possuem essa proteção ambiental e são considerados ambientalmente
+inadequados para a disposição final de resíduos.
+No Brasil, estima-se que 61% dos RSU coletados em 2022 foram encaminhados para aterros sanitários, correspondendo a 43,8 milhões de toneladas de resíduos. O Sudeste e o Sul
+enviaram mais de 70% dos RSU coletados para aterros sanitários, apresentando índices
+melhores que a média nacional. Das outras regiões, todas com desempenho abaixo da
+média nacional, Norte e Nordeste, enviaram somente 37% dos resíduos coletados para uma
+destinação final ambientalmente adequada. Áreas de disposição inadequada receberam
+cerca de 39% do total de resíduos coletados em 2022 no Brasil e estão presentes em todas
+as regiões do país.
+
+Figura 3.9. Disposição final adequada × inadequada de RSU no Brasil em 2022*
+
+38,9%
+27.917.624 ton.
+
+61,1%
+43.812.217 ton.
+
+Disposição final adequada
+
+Disposição final inadequada
+
+*Projeções corrigidas com base no Censo 2022
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 27
+
+Figura 3.10. Disposição final de RSU por região em 2022*
+
+Norte
+
+Nordeste
+
+CentroOeste
+
+Sudeste
+
+Sul
+
+1.695.017 ton.
+
+36,6%
+63,4%
+
+2.939.546 ton.
+5.844.347 ton.
+
+37,3%
+62,7%
+
+9.822.541 ton.
+43,6%
+
+2.453.280 ton.
+
+56,4%
+
+3.175.017 ton.
+27.916.327 ton.
+9.636.432 ton.
+
+25,7%
+5.903.246 ton.
+
+2.344.088 ton.
+
+74,3%
+
+28,4%
+
+Destinação final adequada
+
+Destinação final inadequada
+
+*Projeções corrigidas com base no Censo 2022
+
+71,6%
+
+28 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+3.5. DESPESAS COM SERVIÇOS DE LIMPEZA URBANA
+Os serviços de limpeza urbana incluem, além da varrição de vias e limpeza de áreas públicas, a coleta, transporte, tratamento e disposição final de RSU. Estima-se que as despesas
+dos municípios com limpeza urbana tenham girado em torno de R$ 29,2 bilhões em 2022,
+com a região Sudeste sendo responsável por 55% desse total. Em termos de custos per
+capita, a região Sudeste também é a que mais destina recursos para limpeza urbana, com
+aproximadamente R$ 15,70 mensais por habitante – valor acima da média nacional de R$
+11,96 por habitante por mês.
+Figura 3.11. Despesas municipais (montante) com serviços de limpeza urbana por região em 2022
+
+Norte
+Nordeste
+CentroOeste
+
+R$ 2,021 bi
+R$ 6,578 bi
+R$ 1,428 bi
+R$ 15,984 bi
+
+Sudeste
+Sul
+
+R$ 3,143 bi
+R$ 29,154 bi
+
+Brasil
+
+Figura 3.12. Despesas municipais per capita com serviços de limpeza urbana por região em 2022
+
+Norte
+
+R$ 9,71/hab/mês
+
+Nordeste
+
+R$ 10,03/hab/mês
+
+CentroOeste
+Sudeste
+Sul
+Brasil
+
+R$ 7,31/hab/mês
+R$ 15,70/hab/mês
+R$ 8,75/hab/mês
+R$ 11,96/hab/mês
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 29
+
+As projeções do Panorama 2023 indicam que, em 2022, o mercado de limpeza urbana
+como um todo (gastos municipais e privados) movimentou cerca de R$ 31,2 bilhões. Esse
+montante equivale a um aumento de 4,2% em comparação ao valor estimado para 2021.
+Em termos de distribuição geográfica, as regiões Norte e Nordeste apresentaram as maiores variações em total gasto, com aumento de 9,8% e 9,0%, respectivamente. Ainda acima
+da média nacional, o Centro-Oeste apresentou um aumento de 6,1% no montante gasto.
+As regiões Sudeste e Sul apresentaram aumentos de 2,5% e 0,8%, respectivamente.
+Figura 3.13. Despesas totais com a prestação dos serviços de limpeza urbana por região –
+Comparativo 2021 e 2022
+
+Norte
+
+R$ 2,202 bi
+R$ 2,398 bi
+R$ 6,637 bi
+
+Nordeste
+
+CentroOeste
+
+R$ 7,167 bi
+R$ 1,257 bi
+R$ 1,334 bi
+R$ 16,521 bi
+
+Sudeste
+
+R$ 16,938 bi
+R$ 3,371 bi
+
+Sul
+
+R$ 3,398 bi
+R$ 29,988 bi
+
+Brasil
+
+R$ 31,235 bi
+2021
+
+2022
+
+30 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+3.6. EMPREGOS
+Estima-se que o setor de limpeza urbana tenha empregado diretamente 351 mil pessoas
+em 2022, apresentando um aumento de 4,4% com relação ao ano anterior (cerca de 14,8
+mil postos de trabalho). A maior parte desses empregos está concentrada nas regiões Sudeste e Nordeste, com 43,3% e 29,4% dos postos de trabalho do setor, respectivamente.
+
+Figura 3.14. Empregos diretos gerados pelo setor de limpeza urbana em 2022
+
+Norte
+
+7,5%
+
+29,4%
+
+Nordeste
+CentroOeste
+
+8,0%
+
+Brasil
+
+103.084
+
+28.231
+43,3%
+
+Sudeste
+Sul
+
+26.466
+
+11,8%
+
+152.030
+
+41.332
+351.143
+
+32 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+04
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 33
+
+RESÍDUOS DE
+CONSTRUÇÃO CIVIL
+E DEMOLIÇÃO E DE
+SERVIÇOS DE SAÚDE
+
+34 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+4.1. RESÍDUOS DE CONSTRUÇÃO CIVIL E DEMOLIÇÃO
+Estima-se que, em 2022, foram gerados no Brasil cerca de 45 milhões de toneladas de
+resíduos de construção civil e demolição (RCD, também usado como RCC), o que representa uma redução de 1,8% em relação ao ano anterior. Enquanto a tendência nacional
+foi de queda, com o Sudeste apresentando a maior redução regional na geração anual de
+RCD (3,3%), as regiões Norte e Centro-Oeste seguiram na direção oposta, aumentando sua
+geração de RCD em 1,5% e 3,0%, respectivamente. Mesmo com a queda na geração de
+RCD, em 2022 o Sudeste continuou sendo a região com maior contribuição para o total
+de RCD gerados no país: 50,6%. A região Norte, em contraste, gerou somente 3,8% do total
+de RCD gerados no Brasil.
+
+Figura 4.1. Geração de RCD no Brasil e por grande região - Comparativo 2021 e 2022 (toneladas)
+
+Norte
+
+Nordeste
+
+CentroOeste
+
+3,7%
+
+1.703.173
+
+3,8%
+
+1.728.803
+19,5%
+
+8.953.597
+
+19,6%
+
+8.855.701
+
+11,3%
+11,9%
+
+Sudeste
+
+Sul
+
+5.202.866
+5.356.490
+51,5%
+
+23.614.691
+
+50,6%
+
+22.824.318
+
+14,0%
+
+6.419.076
+
+14,0%
+
+6.304.106
+45.893.403
+
+Brasil
+
+45.069.417
+2021
+
+2022
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 35
+
+4.2. RESÍDUOS DE SERVIÇOS DE SAÚDE
+Em 2022, mais de 307 mil toneladas de resíduos de serviços de saúde (RSS) foram geradas
+no Brasil. Apesar dessa quantidade ser aproximadamente a mesma estimada para 2021,
+o perfil da geração mudou: o número de internações por COVID-19 diminui e o número
+de internações para a realização de procedimentos eletivos aumentou. A região Sudeste
+continua sendo a maior geradora de RSS do país, responsável por 66% do total, enquanto
+a região Norte apresenta a menor contribuição, de 3,8%.
+
+Figura 4.2. Geração de RSS no Brasil e por grande região - Comparativo 2021 e 2022 (toneladas)
+
+Norte
+
+3,8%
+
+11.689
+
+3,8%
+
+11.638
+
+Nordeste
+
+CentroOeste
+
+15,7%
+
+48.205
+
+14,9%
+
+45.939
+
+8,3%
+
+25.433
+
+8,8%
+
+27.107
+
+Sudeste
+
+Sul
+
+66,4%
+
+203,904
+
+66,3%
+
+203.609
+
+5,9%
+
+17.989
+
+6,2%
+
+19.030
+307.220
+
+Brasil
+
+307.323
+2021
+
+2022
+
+36 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+05
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 37
+
+LOGÍSTICA REVERSA
+
+A
+
+Lei nº 12.305/2010, que instituiu a Política Nacional de Resíduos Sólidos, atribuiu a diversos
+setores a responsabilidade pelo desenvolvimento e implementação de sistemas de logística reversa para seus produtos e embalagens
+pós-consumo. Neste capítulo é apresentada
+a evolução de sistemas de logística reversa já
+implementados no Brasil e que possuem resultados expressivos e publicamente disponibilizados.
+
+38 | Panorama dos Resíduos Sólidos no Brasil 2023
+
+5.1. LATAS DE ALUMÍNIO PARA BEBIDAS
+A coleta e reciclagem de latas de alumínio para bebidas é feita no Brasil há décadas, mas
+em 2021, com a assinatura de um Termo de Compromisso com o Ministério do Meio Ambiente, o sistema de logística reversa desse material passou a ser operado pela entidade
+gestora Recicla Latas. Com destaque internacional para a abrangência do sistema, o índice
+de reciclagem de latas de alumínio no Brasil tem se mantido acima de 96% nos últimos 10
+anos e, segundo a Recicla Latas, em 2022 esse índice alcançou a marca histórica de 100%
+de reciclagem das latas vendidas. Desde 2012, foram coletadas 3,6 milhões de toneladas
+de latas de alumínio no país.
+
+Figura 5.1. Evolução anual da reciclagem de latas de alumínio para bebidas no Brasil (mil toneladas)
+
+98,7%
+97,4%
+
+100%
+
+97,6%
+
+2012
+
+2015
+
+Vendidas
+
+2016
+
+2017
+
+2018
+
+2019
+
+2020
+
+2021
+
+390,2
+
+390,2
+
+414,5
+
+409,3
+
+402,2
+
+391,6
+
+375,7
+
+366,8
+
+330,3
+
+319,9
+
+303,9
+
+97,3%
+
+295,8
+
+298,7
+
+2014
+
+292,5
+
+289,5
+
+264,9
+
+2013
+
+97,7%
+
+286,6
+
+97,9%
+
+280,0
+
+98,4%
+97,1%
+
+257,3
+
+272,8
+
+267,1
+
+97,9%
+
+294,2
+
+96,9%
+
+2022
+
+Coletadas
+
+Fonte: Relatório Recicla Latas - Cadeia de Reciclagem de Latas de Alumínio para Bebidas nos Estados (2023)
+
+Atualmente, a Recicla Latas disponibiliza 36 centros de coleta de latas de alumínio distribuídos em 18 estados mais o Distrito Federal. O sistema também conta com 49 recicladoras,
+25 fábricas e 61 cooperativas parceiras.
+
+ABREMA - Associação Brasileira de Resíduos e Meio Ambiente | 39
+
+5.2. EMBALAGENS DE DEFENSIVOS AGRÍCOLAS
+O Sistema Campo Limpo, operado desde 2001 pelo Instituto Nacional de Processamento
+de Embalagens Vazias (inpEV), apresentou expressiva evolução na última década, passando
+de cerca de 37 mil toneladas processadas em 2012 para mais de 52 mil toneladas em 2022
+(redução de 2% em relação a 2021). De acordo com o inpEV em seu Relatório de Sustentabilidade 2022, 93% de todas as embalagens plásticas recebidas pelo sistema são recicladas,
+com o restante sendo enviado para incineração. Para as embalagens primárias1 plást
+(Content truncated due to size limit. Use line ranges to read in chunks)

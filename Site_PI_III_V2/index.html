@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma principal da página como Português do Brasil -->
+
+<head>
+    <!-- Início da seção <head>: Contém metadados, links para CSS e scripts -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, essencial para exibir corretamente caracteres especiais do português -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para garantir que o site seja responsivo e se adapte a diferentes tamanhos de tela (celulares, tablets, desktops) -->
+    <title>Início - Cadê o Ecoponto</title>
+    <!-- Título da página, exibido na aba do navegador e importante para SEO -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <!-- Define o ícone (favicon) da página, exibido na aba do navegador -->
+
+    <!-- Links para folhas de estilo (CSS) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Link para o CSS do Bootstrap (framework CSS), carregado de um CDN para melhor performance -->
+    <!-- O atributo 'integrity' garante que o arquivo não foi adulterado e 'crossorigin' permite o carregamento de fontes externas -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para a folha de estilo personalizada principal (style.css), onde as modificações de design e acessibilidade foram aplicadas -->
+
+    <!-- Link para jQuery (biblioteca JavaScript) -->
+    <!-- Necessário para o funcionamento de alguns componentes do Bootstrap (como o menu responsivo) e pode ser usado por scripts personalizados -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Carrega a biblioteca jQuery de um CDN -->
+
+    <!-- Estilos CSS embutidos (inline) específicos para esta página -->
+    <!-- Embora funcional, a melhor prática seria mover esses estilos para o arquivo style.css para melhor organização e manutenção -->
+    <style>
+        /* Estilo para o link "Pular para o conteúdo" (Melhoria de Acessibilidade) */
+        /* Este link é oculto visualmente por padrão, mas se torna visível quando recebe foco (navegação por teclado) */
+        .skip-link {
+            position: absolute; /* Permite posicionamento fora da tela */
+            left: -9999px; /* Move o link para muito longe à esquerda, escondendo-o */
+            top: auto; /* Posição vertical automática */
+            width: 1px; /* Largura mínima */
+            height: 1px; /* Altura mínima */
+            overflow: hidden; /* Esconde qualquer conteúdo que exceda as dimensões */
+            z-index: -999; /* Garante que não interfira com outros elementos */
+            background-color: #f1f1f1; /* Cor de fundo clara */
+            color: black; /* Cor do texto escura */
+            padding: 10px; /* Espaçamento interno */
+            border: 1px solid #ccc; /* Borda sutil */
+        }
+
+        /* Estilo aplicado quando o link "Pular para o conteúdo" recebe foco ou está ativo */
+        .skip-link:focus,
+        .skip-link:active {
+            left: 10px; /* Traz o link para a tela, posicionando-o à esquerda */
+            top: 10px; /* Posiciona o link no topo */
+            width: auto; /* Largura automática baseada no conteúdo */
+            height: auto; /* Altura automática baseada no conteúdo */
+            overflow: visible; /* Torna o conteúdo visível */
+            z-index: 9999; /* Garante que fique visível sobre outros elementos */
+        }
+
+        /* Estilos gerais e específicos da página (Alguns destes podem ser redundantes se já definidos em style.css) */
+
+        /* Estilo para botões primários (Ex: Cadastre-se) */
+        /* Reafirma ou sobrescreve estilos do style.css, se necessário */
+        .btn-primary {
+            background-color: #28a745; /* Cor de fundo verde */
+            border-color: #28a745; /* Cor da borda verde */
+            color: #fff; /* Cor do texto branca */
+        }
+
+        /* Estilo para botões primários no estado :hover ou :focus */
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: #218838; /* Verde mais escuro */
+            border-color: #1e7e34; /* Borda verde mais escura */
+            color: #fff; /* Mantém texto branco */
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); /* Adiciona sombra de foco (melhora acessibilidade) */
+        }
+
+        /* Estilos para o corpo da página (<body>) */
+        /* Alguns destes estilos reforçam ou podem conflitar com style.css. Idealmente, deveriam estar apenas em style.css */
+        body {
+            background-color: #e9f5e9; /* Cor de fundo verde bem claro (definida em style.css) */
+            /* overflow-x: hidden; */ /* Comentado - Evitar ocultar conteúdo horizontalmente sem necessidade */
+            color: #333; /* Cor do texto principal (definida em style.css) */
+            font-family: 'Arial', sans-serif; /* Fonte padrão (definida em style.css) */
+            display: flex; /* Usa flexbox para layout (definido em style.css) */
+            flex-direction: column; /* Organiza filhos em coluna (definido em style.css) */
+            min-height: 100vh; /* Altura mínima de 100% da viewport (definido em style.css) */
+            padding-top: 70px; /* Espaçamento no topo para header fixo (definido em style.css) */
+            padding-bottom: 60px; /* Espaçamento no rodapé para footer fixo (definido em style.css) */
+        }
+
+        /* Estilo para a marca d'água de fundo */
+        /* Controlado por style.css, esta regra aqui é redundante */
+        .watermark {
+            position: fixed; /* Posição fixa */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Não interfere com interações */
+            background-image: url("imagens/Logo.png"); /* Imagem da logo */
+            background-size: contain; /* Ajusta tamanho */
+            background-repeat: no-repeat; /* Não repete */
+            background-position: center; /* Centraliza */
+            opacity: 0.08; /* Baixa opacidade */
+            z-index: -1; /* Fica atrás do conteúdo */
+        }
+
+        /* Estilo para o cabeçalho (<header>) */
+        /* MODIFICADO: A cor de fundo principal é definida em style.css (#004d40). Esta regra pode ser removida ou ajustada. */
+        header {
+            /* background-color: #004d00; */ /* Cor original comentada, prevalece a de style.css */
+            color: #fff; /* Cor do texto (branco) */
+            position: fixed; /* Posição fixa no topo */
+            top: 0;
+            width: 100%;
+            z-index: 1030; /* Garante que fique sobre a maioria dos elementos */
+            /* Sombra definida em style.css */
+        }
+
+        /* Estilo para a barra de navegação (<nav>) */
+        /* Ajustes de padding definidos em style.css */
+        .navbar {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Estilo para links dentro da navegação escura */
+        /* Definido em style.css */
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.85); /* Branco semi-transparente */
+        }
+
+        /* Estilo para links da navegação no estado :hover ou :focus */
+        /* Definido em style.css */
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link:focus {
+            color: #fff; /* Branco sólido */
+            text-decoration: underline; /* Sublinhado para indicar interação/foco */
+            /* Contorno de foco definido em style.css */
+        }
+
+        /* Estilo para o botão 'hamburger' do menu mobile */
+        /* Definido em style.css */
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.3); /* Borda sutil */
+        }
+
+        /* Estilo para o ícone dentro do botão 'hamburger' */
+        /* Definido em style.css */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Estilo para o conteúdo principal (<main>) */
+        /* Definido em style.css */
+        main {
+            flex: 1; /* Ocupa espaço flexível */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        /* Classe auxiliar para conteúdo principal */
+        /* Definido em style.css */
+        .main-content {
+            padding: 1rem 0;
+        }
+
+        /* Estilos para vídeos incorporados responsivos */
+        /* Utiliza a técnica de padding-bottom para manter a proporção 16:9 */
+        .embed-responsive {
+            position: relative; /* Necessário para posicionar o iframe absolutamente */
+            padding-bottom: 56.25%; /* Proporção 16:9 (9 / 16 * 100) */
+            height: 0; /* Altura zero, o padding-bottom define a altura */
+            overflow: hidden; /* Esconde qualquer conteúdo que exceda */
+            margin-bottom: 1rem; /* Margem inferior */
+            border: 1px solid #ccc; /* Borda sutil */
+        }
+
+        /* Estilo para o iframe dentro do container responsivo */
+        .embed-responsive iframe {
+            position: absolute; /* Posicionado dentro do .embed-responsive */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ocupa toda a largura do container */
+            height: 100%; /* Ocupa toda a altura do container */
+        }
+
+        /* Estilo para o rodapé (<footer>) */
+        /* MODIFICADO: A cor de fundo principal é definida em style.css (#000000). Esta regra pode ser removida ou ajustada. */
+        footer {
+            /* background-color: #333; */ /* Cor original comentada, prevalece a de style.css */
+            color: #ccc; /* Cor do texto (cinza claro) */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px 0; /* Espaçamento vertical interno (ajustado em style.css para 15px) */
+            position: fixed; /* Posição fixa na base da tela */
+            bottom: 0;
+            width: 100%;
+            z-index: 1030; /* Garante visibilidade (ajustado em style.css para 1020) */
+            font-size: 0.9em; /* Tamanho de fonte menor (definido em style.css) */
+        }
+
+        /* Ajustes de responsividade para telas menores (max-width: 768px) */
+        /* Definidos e mais detalhados em style.css */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px; /* Ajusta padding para header menor */
+                padding-bottom: 50px; /* Ajusta padding para footer menor */
+            }
+
+            .navbar-nav {
+                margin-top: 0.5rem; /* Espaço acima dos links no menu mobile colapsado */
+            }
+        }
+    </style>
+    <!-- Fim dos estilos CSS embutidos -->
+</head>
+<!-- Fim da seção <head> -->
+
+<body>
+    <!-- Início do corpo (conteúdo visível) da página -->
+
+    <!-- Link "Pular para o conteúdo principal" - Melhoria de Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho da página -->
+    <!-- MODIFICADO (em style.css): Cor de fundo alterada para #004d40 -->
+    <header>
+        <!-- Barra de navegação Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- 'navbar-expand-lg': Colapsa em telas menores que 'lg' -->
+            <!-- 'navbar-dark': Esquema de cores para fundo escuro -->
+            <div class="container">
+                <!-- Container Bootstrap para limitar largura e centralizar -->
+
+                <!-- Botão 'hamburger' para exibir/ocultar menu em telas menores -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Abrir/Fechar Navegação">
+                    <!-- 'data-toggle' e 'data-target' controlam o collapse do Bootstrap -->
+                    <!-- 'aria-controls' e 'aria-label' para acessibilidade -->
+                    <span class="navbar-toggler-icon"></span>
+                    <!-- Ícone visual do botão -->
+                </button>
+
+                <!-- Conteúdo da navegação que será colapsado -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Lista de links de navegação -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- 'mr-auto' empurra itens seguintes para a direita -->
+                        <li class="nav-item active">
+                            <!-- 'active' indica a página atual -->
+                            <a class="nav-link" href="index.html">Início <span class="sr-only">(página atual)</span></a>
+                            <!-- Texto '(página atual)' apenas para leitores de tela -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte correto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no Ecoponto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Dados_Abertos.html">Dados Abertos</a>
+                        </li>
+                    </ul>
+                    <!-- Botão/Link de Cadastro -->
+                    <!-- Usado <a> estilizado como botão para navegação -->
+                    <a href="cadastro.html" class="btn btn-primary my-2 my-lg-0">Cadastre-se</a>
+                    <!-- 'my-2 my-lg-0' ajusta margens verticais responsivamente -->
+                </div>
+                <!-- Fim do conteúdo colapsável -->
+            </div>
+            <!-- Fim do container da navegação -->
+        </nav>
+        <!-- Fim da barra de navegação -->
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    <!-- Conteúdo principal da página -->
+    <main id="main-content" class="main-content">
+        <!-- ID 'main-content' é o alvo do link "Pular para o conteúdo" -->
+        <div class="container">
+            <!-- Container Bootstrap para layout -->
+
+            <!-- Seção de Boas-vindas -->
+            <section id="greeting" class="text-center mb-4">
+                <!-- 'text-center' centraliza o texto, 'mb-4' adiciona margem inferior -->
+                <h1>Bem-vindo ao site Cadê o Ecoponto</h1>
+                <!-- Título principal -->
+                <div>
+                    <p>Fez uma pequena reforma, trocou algum móvel da sua casa ou precisa descartar algum lixo que não é considerado comum e não sabe o que fazer? O site cadê o ecoponto pode te ajudar! Pensando em dar mais visibilidade para todas as pessoas que precisam realizar esse tipo de descarte, desenvolvemos esse site para que você possa localizar o ecoponto mais próximo da sua casa, além de entender quais são os materiais aceitos e os horários de funcionamento. Então acesse e faça mais pelo meio ambiente.</p>
+                    <!-- Parágrafo introdutório -->
+                </div>
+            </section>
+            <!-- Fim da Seção de Boas-vindas -->
+
+            <!-- Seção Sobre Ecopontos -->
+            <section id="about-ecoponto" class="mb-4">
+                <h2 class="mt-4">O que é o Ecoponto?</h2>
+                <!-- Subtítulo. 'mt-4' adiciona margem superior -->
+                <p>Conheça um pouco sobre o que é, e como funcionam os Ecopontos espalhados pela Cidade de SP no vídeo abaixo:</p>
+                <!-- Parágrafo introdutório para o vídeo -->
+
+                <!-- Vídeo Incorporado do YouTube -->
+                <!-- Utiliza classes Bootstrap para responsividade -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qDLXRLqbjoA?si=mfwx0MCdvGoZeAEh"
+                        title="Vídeo: Ecopontos da Cidade de São Paulo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                        <!-- 'title' é importante para acessibilidade, descreve o conteúdo do iframe -->
+                        <!-- 'allow' especifica permissões para o iframe -->
+                        <!-- 'allowfullscreen' permite que o vídeo seja exibido em tela cheia -->
+                    </iframe>
+                    <!-- O iframe duplicado foi removido -->
+                </div>
+                <!-- Fim do container do vídeo -->
+
+                <p class="mt-3">Os Ecopontos são locais destinados à coleta de diversos tipos de resíduos que não são recolhidos pela coleta domiciliar regular. Esses pontos servem para evitar que o lixo seja descartado de forma irregular, como em terrenos vazios, rios e outros locais que causam danos ao meio ambiente. A partir do momento em que o material é descartado, o Ecoponto se encarrega de fazer o tratamento correto, garantindo a destinação final adequada.</p>
+                <!-- Parágrafo explicativo sobre a função dos Ecopontos -->
+
+                <p>No entanto, é importante observar que os Ecopontos não aceitam todos os tipos de resíduos. Alguns materiais como pilhas, baterias, lâmpadas fluorescentes, medicamentos e outros resíduos especiais devem ser descartados em locais específicos, como os pontos de coleta seletiva ou postos de saúde.</p>
+                <!-- Parágrafo de aviso sobre materiais não aceitos -->
+            </section>
+            <!-- Fim da Seção Sobre Ecopontos -->
+
+        </div>
+        <!-- Fim do container principal -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Elemento para a marca d'água de fundo -->
+    <!-- Estilizado via CSS -->
+    <div class="watermark"></div>
+
+    <!-- Rodapé da página -->
+    <!-- MODIFICADO (em style.css): Cor de fundo alterada para #000000 -->
+    <footer>
+        &copy; 2025 Cadê o Ecoponto.
+        <!-- Informação de copyright. O ano pode ser atualizado dinamicamente se necessário -->
+    </footer>
+    <!-- Fim do rodapé -->
+
+    <!-- Scripts JavaScript -->
+    <!-- Colocados no final do <body> para otimizar o carregamento da página -->
+
+    <!-- Popper.js (Dependência do Bootstrap JS para tooltips, popovers, dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (Funcionalidades interativas do Bootstrap, como o menu responsivo) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Script personalizado (script.js) -->
+    <!-- Comentado aqui, pois as funcionalidades principais desta página (index.html) não parecem depender dele diretamente. -->
+    <!-- O script.js parece conter lógica para gráficos (Dados_Abertos.html) e possivelmente login/cadastro. -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+<!-- Fim do corpo da página -->
+
+</html>
+<!-- Fim do documento HTML -->
+

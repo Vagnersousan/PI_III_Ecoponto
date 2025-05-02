@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dados Abertos - Cadê o Ecoponto</title>
+    <link rel="icon" type="image/png" href="imagens/Logo Colorido Redondo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS for Charts -->
+    <link rel="stylesheet" href="graficos.css"> <!-- Link to the LATEST CSS -->
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Force background color for this page specifically */
+        body {
+            background-color: #d4edda !important; /* Verde claro from index.html */
+        }
+    </style>
+</head>
+<body>
+    <!-- Watermark (ensure style.css handles its background and positioning) -->
+    <div class="watermark"></div>
+
+    <header style="background-color: black; color: white;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Logo placeholder -->
+                <!-- <a class="navbar-brand" href="index.html"><img src="imagens/Logo_Branco_Redondo.png" alt="Logo Cadê o Ecoponto" height="40"></a> -->
+                <a href="cadastro.html"><button id="inscreverBtn" class="btn btn-primary ml-auto mr-2">Cadastre-se</button></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte correto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no Ecoponto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section>
+            <div class="container">
+                <h2 class="mt-4">Dados Abertos sobre Resíduos Sólidos Urbanos</h2>
+                <p>Esta página contém informações estatísticas, históricas e gráficos sobre os Resíduos Sólidos Urbanos, acumulados no Brasil e na América Latina, destacando a importância da gestão adequada e dos Ecopontos de SP.<br><strong>Atenção:</strong> Caso esteja acessando este site pelo Notebook ou Desktop, passe o mouse por cima dos gráficos para ver os valores. Caso esteja acessando por dispositivos móveis como Celular ou Tablet, toque em cima dos gráficos para visualizar os valores.</p>
+
+                <!-- Chart Containers with Explanatory Text -->
+                <div class="chart-container">
+                    <h3>Geração vs Coleta de Resíduos Sólidos Urbanos (Milhões de Toneladas)</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="graficoGeracaoColeta"></canvas>
+                    </div>
+                    <p class="chart-explanation">A linha vermelha indica a quantidade de lixo que <strong>não foi coletada</strong>, representando um grande volume que pode acabar poluindo o meio ambiente.</p>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Destinação dos Resíduos Sólidos Urbanos na América Latina e no Caribe (2021)</h3>
+                     <div class="canvas-wrapper">
+                        <canvas id="graficoDestinoALC"></canvas>
+                    </div>
+                    <p class="chart-explanation">Observe que, a grande porcentagem de lixo com <strong>destinação inadequada</strong> (vermelho). A reciclagem e a compostagem (amarelo), ainda representam uma pequena fração. Os ecopontos de SP, são essenciais para aumentar essa fração amarela!</p>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Taxa de Coleta de Resíduos Sólidos Urbanos (%)</h3>
+                     <div class="canvas-wrapper">
+                        <canvas id="graficoTaxaColeta"></canvas>
+                    </div>
+                     <p class="chart-explanation">Embora a taxa de coleta possa ser alta, é fundamental garantir que o lixo coletado tenha o destino correto. Por esse motivo, é muito importante usar os Ecopontos para o descarte adequado de resíduos!</p>
+                </div>
+
+                <!-- Data Source Section -->
+                <div class="data-source">
+                    <p><strong>Fontes dos Dados:</strong></p>
+                    <ul>
+                        <li>Brasil (2022): ABREMA - Panorama dos Resíduos Sólidos no Brasil 2023.</li>
+                        <li>Brasil (2023): ABREMA - Panorama dos Resíduos Sólidos no Brasil 2024.</li>
+                        <li>América Latina e Caribe (2021): BID - Hub de Resíduos Sólidos e Economia Circular (dados agregados para o ano)</li>
+                    </ul>
+                    <p><strong>Observação:</strong> Os dados mensais e para os anos de 2024 e 2025, não estavam disponíveis publicamente nas fontes consultadas até a data da pesquisa (Abril 2025). Os dados da América Latina e Caribe referem-se ao ano de 2021, o mais recente disponível no Hub do BID no momento da consulta. Esclarecemos que por motivos de Licitações, não conseguimos receber os dados referentes ao Ecoponto, e por esse mesmo motivo, utilizamos dados globais para chamar a atenção do nosso público, para a importância do descarte correto dos resíduos.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: black; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        &copy; 2024 Cadê o Ecoponto.
+    </footer>
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom Script for Charts -->
+    <script src="script.js"></script> <!-- Reference the user's script name (containing script_v6.js code) -->
+    <!-- Existing script from user file (modified to avoid conflict if needed) -->
+    <script>
+        // Check if the button exists before adding listener
+        const inscreverBtn = document.getElementById("inscreverBtn");
+        if (inscreverBtn) {
+            // Assuming "formularioInscricao" is on "cadastro.html", this might not be needed here
+            // inscreverBtn.addEventListener("click", function () {
+            //     // Redirect or handle logic specific to this page
+            // });
+        }
+    </script>
+</body>
+</html>
+

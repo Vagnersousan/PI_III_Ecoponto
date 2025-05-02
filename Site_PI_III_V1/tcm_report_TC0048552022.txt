@@ -1,0 +1,199 @@
+TC/004855/2022
+
+RELATÓRIO DE ANÁLISE DE FUNÇÃO DE GOVERNO
+
+Ordem de Serviço
+
+e-TCM
+
+2021/05983
+
+004855/2022
+
+Período de
+abrangência
+
+Período da
+realização
+
+Exercício de 2021
+
+23.03.22 a 30.06.22
+
+Secretaria responsável pela função de governo
+Autoridade Municipal de Limpeza Urbana/Fundo Municipal de Limpeza Urbana
+(Amlurb/FMLU), Secretaria Municipal das Subprefeituras (Smsub), as 32 Subprefeituras,
+Fundo Municipal de Iluminação Pública (Fundip), Secretaria Municipal de Urbanismo e
+Licenciamento (SMUL), Secretaria Municipal de Infraestrutura Urbana e Obras (Siurb), Fundo
+de Desenvolvimento Urbano (Fundurb), entre outros.
+
+Função de Governo
+15 – Urbanismo.
+Objetivo da análise
+Avaliar a função de governo com base nos resultados alcançados.
+Equipe técnica
+Fernando Celso Morini
+
+RF 20.243
+
+Rafael de Almeida Paulillo
+
+RF 20.141
+
+Ricardo dos Santos de Souza (supervisor)
+
+RF 20.188
+
+Rodrigo Machado Silva
+
+RF 20.280
+
+Guilherme Kazuhisa Tanabe
+
+RF 20.218
+
+Dimitri F. Carvalho Rodermel
+
+RF 20.271
+
+Cód. 042 (Versão 05)
+
+1
+
+TC/004855/2022
+
+LISTA DE FIGURAS
+RESUMO
+Figura 1 – Função Urbanismo: execução da LOA 2021 por órgãos........................................... 5
+Figura 2 – Função Urbanismo: execução da LOA 2021 por programas de governo.................. 6
+Figura 3 – Função Urbanismo: execução da LOA 2021 por natureza de despesa.................... 6
+Figura 4 – Função Urbanismo: PPA e Valores Empenhados 2018-2021.................................... 7
+RELATÓRIO
+Figura 1 - Função Urbanismo: recursos liquidados em 2021 por natureza de despesa ........... 15
+
+Cód. 042 (Versão 05)
+
+2
+
+TC/004855/2022
+
+LISTA DE QUADROS
+Quadro 1: Principais Órgãos da Função Urbanismo – Exercício de 2021 ................ 12
+Quadro 2: Plano Plurianual (PPA) 2018/2021 .......................................................... 14
+Quadro 3: Lei Orçamentária Anual (LOA) 2021 ........................................................ 14
+Quadro 4: Execução da LOA 2021 por Natureza de Despesa ................................. 15
+Quadro 5: Investimentos na Função Urbanismo em 2021 ........................................ 16
+Quadro 6: Funções de Governo do Programa 3005 – Exercício de 2021 ................ 21
+Quadro 7: PPA: Realização Física e Financeira do Programa 3005 ........................ 21
+Quadro 8: Execução Orçamentária do Programa 3005, em 2021 ............................ 23
+Quadro 9: Indicadores da LM nº 14.173/2006 relativos ao Programa 3005...............24
+Quadro 10: Indicador do PPA 2018-2021 para o programa 3005 ............................. 26
+Quadro 11: Evolução dos Serviços do Programa 3005 ............................................ 26
+Quadro 12: PPA: Realização Física e Financeira do Programa 3009 ...................... 29
+Quadro 13: Execução Orçamentaria do Programa 3009, em 2021 .......................... 30
+Quadro 14: PPA: Realização Física e Financeira do Programa 3022 ...................... 32
+Quadro 15: Execução Orçamentária do Programa 3022, em 2021 .......................... 34
+Quadro 16: Indicadores do PPA 2018-2021 para o programa 3022 ......................... 35
+Quadro 17: Metas relativas à Função Urbanismo: Programa de Metas de São Paulo –
+2021/2024 e sua relação com a Agenda 2030 ......................................................... 37
+
+Cód. 042 (Versão 05)
+
+3
+
+TC/004855/2022
+
+LISTA DE SIGLAS
+AMLURB
+Art.
+CF
+FUNDURB
+FMD
+FMLU
+FUNDIP
+ILUME
+LM
+LOA
+OAE
+ONU
+PdM
+PMSP
+PPA
+PPP
+Selimp
+SFMSP
+SP Regula
+SIURB
+SMUL
+SMSUB
+TCMSP
+
+Cód. 042 (Versão 05)
+
+Autoridade Municipal de Limpeza Urbana
+Artigo
+Constituição Federal
+Fundo de Desenvolvimento Urbano
+Fundo Municipal de Desenvolvimento Social
+Fundo Municipal de Limpeza Urbana
+Fundo Municipal de Iluminação Pública
+Departamento de Iluminação Pública
+Lei Municipal
+Lei Orçamentária Anual
+Obras de Arte Especiais
+Organização das Nações Unidas
+Plano de Metas
+Prefeitura do Município de São Paulo
+Plano Plurianual
+Parceria Público Privada
+Secretaria Executiva de Limpeza Pública
+Serviço Funerário do Município de São Paulo
+Agência Reguladora de Serviços Públicos do Município de São Paulo
+Secretaria Municipal de Infraestrutura Urbana e Obras
+Secretaria Municipal de Urbanismo e Licenciamento
+Secretaria Municipal das Subprefeituras
+Tribunal de Contas do Município de São Paulo
+
+4
+
+TC/004855/2022
+
+RESUMO
+
+A Função Urbanismo abrange as ações relacionadas à prestação de serviços urbanos contínuos
+conhecidos como “zeladoria” (como coleta de lixo domiciliar, limpeza de vias e logradouros
+públicos - “varrição”, iluminação pública, poda de árvores, tapa-buracos, entre outros) e obras e
+serviços visando a requalificação da infraestrutura urbana.
+Este trabalho demonstra que, como tem ocorrido nos últimos anos, a execução orçamentária das
+ações da Função Urbanismo relativas aos serviços de zeladoria atinge os valores previstos nos
+instrumentos de planejamento, ao contrário das ações referentes a obras e requalificações
+urbanas.
+O montante liquidado no ano de 2021 alcançou o total de R$ 4,8 bilhões. Desses valores, observase que 86,9% dos recursos liquidados na LOA 2021 foram por órgãos responsáveis pelas ações
+de zeladoria urbana, como a AMLURB, SMSUB, Subprefeituras e Fundip conforme a Figura 1
+abaixo.
+Figura 1 – Função Urbanismo: execução da LOA 2021 por órgãos
+
+Fonte: Sistema Ábaco TCM-SP em 17.05.22.
+
+Esse montante liquidado de R$ 4,8 bilhões representou 77,1% do valor aprovado pela LOA 2021,
+e 67,6% de seu valor atualizado conforme Figura 2 abaixo. Considerando os Programas de
+Cód. 042 (Versão 05)
+
+5
+
+TC/004855/2022
+
+Governo relativos à Função Urbanismo, tem-se que as despesas liquidadas não atingiram os
+valores orçados e atualizados, com exceção do programa 3005 - Promoção da sustentabilidade
+ambiental, relativo às atividades de limpeza pública (AMLURB).
+Figura 2 –Execução da LOA 2021 por programas de governo
+8.000.000.000
+7.000.000.000
+6.000.000.000
+5.000.000.000
+4.000.000.000
+
+3.000.000.000
+2.000.000.000
+1.000.000.000
+0

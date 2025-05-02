@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma principal da página como Português do Brasil -->
+
+<head>
+    <!-- Início da seção <head>: Contém metadados, links para CSS e scripts -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, essencial para exibir corretamente caracteres especiais do português -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para garantir que o site seja responsivo e se adapte a diferentes tamanhos de tela (celulares, tablets, desktops) -->
+    <title>Dados Abertos - Cadê o Ecoponto</title>
+    <!-- Título da página, exibido na aba do navegador e importante para SEO -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <!-- Define o ícone (favicon) da página, exibido na aba do navegador -->
+
+    <!-- Links para folhas de estilo (CSS) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Link para o CSS do Bootstrap (framework CSS), carregado de um CDN para melhor performance -->
+    <!-- O atributo 'integrity' garante que o arquivo não foi adulterado e 'crossorigin' permite o carregamento de fontes externas -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="graficos.css">
+    <!-- Link para a folha de estilo personalizada principal (style.css), onde as modificações de design e acessibilidade foram aplicadas -->
+    <!-- <link rel="stylesheet" href="graficos.css"> -->
+    <!-- CSS original específico para gráficos (Comentado, pois os estilos necessários foram integrados ou ajustados em style.css) -->
+
+    <!-- Inclusão da biblioteca Chart.js para renderização dos gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Carrega a biblioteca Chart.js de um CDN -->
+
+    <!-- Estilos CSS embutidos (inline) específicos para esta página -->
+    <!-- Estes estilos foram mantidos para garantir a consistência visual dos contêineres dos gráficos, mas idealmente poderiam ser movidos para style.css -->
+    <style>
+        /* Estilos para os contêineres que envolvem cada gráfico */
+        .chart-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência para destacar sobre o fundo da página */
+            padding: 1.5rem; /* Espaçamento interno */
+            margin-bottom: 2rem; /* Margem inferior para separar os gráficos */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Borda leve */
+            /* MODIFICADO (em style.css): Adicionada regra de max-width para limitar largura em desktops */
+        }
+
+        /* Estilo para os títulos (h3) dentro dos contêineres dos gráficos */
+        .chart-container h3 {
+            margin-top: 0; /* Remove margem superior padrão */
+            margin-bottom: 1rem; /* Margem inferior para separar do gráfico */
+            text-align: center; /* Centraliza o título */
+            color: #155724; /* Cor verde escura para os títulos */
+        }
+
+        /* Estilo para o elemento que envolve o <canvas> do gráfico */
+        /* Este wrapper ajuda a controlar o tamanho responsivo do gráfico */
+        .canvas-wrapper {
+            position: relative; /* Necessário para o Chart.js ajustar o tamanho corretamente */
+            /* A altura agora é controlada principalmente pela proporção do Chart.js e pelas media queries em style.css */
+            /* height: 60vh; */ /* Altura original comentada */
+            /* max-height: 450px; */ /* Altura máxima original comentada */
+            width: 100%; /* Garante que o wrapper ocupe toda a largura do .chart-container */
+            margin-bottom: 1rem; /* Margem inferior para separar da explicação */
+        }
+
+        /* Estilo para o parágrafo de explicação abaixo de cada gráfico */
+        .chart-explanation {
+            font-size: 0.95em; /* Tamanho de fonte ligeiramente menor */
+            text-align: center; /* Centraliza o texto */
+            color: #333; /* Cor de texto padrão */
+            margin-top: 1rem; /* Margem superior para separar do gráfico */
+        }
+
+        /* Estilo para a seção que lista as fontes dos dados */
+        .data-source {
+            margin-top: 2rem; /* Margem superior para separar do último gráfico */
+            padding: 1rem; /* Espaçamento interno */
+            background-color: rgba(255, 255, 255, 0.7); /* Fundo branco com mais transparência */
+            border-radius: 5px; /* Bordas arredondadas */
+            font-size: 0.9em; /* Tamanho de fonte menor */
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Borda leve */
+        }
+
+        /* Estilo para listas não ordenadas dentro da seção de fontes */
+        .data-source ul {
+            margin-bottom: 0.5rem; /* Margem inferior para a lista */
+        }
+
+        /* Estilos comentados para uma tabela alternativa que não está mais em uso */
+        /* .chart-table { ... } */
+
+    </style>
+    <!-- Fim dos estilos CSS embutidos -->
+</head>
+<!-- Fim da seção <head> -->
+
+<body>
+    <!-- Início do corpo (conteúdo visível) da página -->
+
+    <!-- Link "Pular para o conteúdo principal" - Melhoria de Acessibilidade -->
+    <!-- Este link é oculto visualmente, mas acessível por leitores de tela e navegação por teclado, permitindo pular a navegação e ir direto ao conteúdo principal -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Elemento para a marca d'água de fundo -->
+    <!-- A imagem e os estilos são controlados pelo style.css -->
+    <div class="watermark"></div>
+
+    <!-- Cabeçalho da página (Navbar) -->
+    <!-- A estrutura segue o padrão do Bootstrap para uma barra de navegação responsiva -->
+    <!-- MODIFICADO (em style.css): Cor de fundo alterada para #004d40 (verde escuro/azul petróleo) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- 'navbar-expand-lg' faz o menu colapsar em telas menores que 'lg' -->
+            <!-- 'navbar-dark' define o esquema de cores para texto claro sobre fundo escuro -->
+            <div class="container">
+                <!-- Container do Bootstrap para limitar a largura e centralizar o conteúdo do cabeçalho -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Abrir/Fechar Navegação">
+                    <!-- Botão "hamburger" que aparece em telas menores para exibir/ocultar o menu -->
+                    <!-- Atributos 'data-*' controlam o comportamento do collapse do Bootstrap -->
+                    <!-- 'aria-*' são atributos de acessibilidade -->
+                    <span class="navbar-toggler-icon"></span>
+                    <!-- Ícone visual do botão hamburger -->
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Conteúdo do menu que será colapsado em telas menores -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- Lista de links de navegação. 'mr-auto' empurra os itens seguintes para a direita -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte
+                                correto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no
+                                Ecoponto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a>
+                        </li>
+                        <li class="nav-item active">
+                            <!-- 'active' marca visualmente este item como a página atual -->
+                            <a class="nav-link" href="Dados_Abertos.html">Dados Abertos <span class="sr-only">(página
+                                    atual)</span></a>
+                            <!-- '(página atual)' dentro de um span 'sr-only' é para leitores de tela -->
+                        </li>
+                    </ul>
+                    <!-- Botão de Cadastro -->
+                    <a href="cadastro.html" class="btn btn-primary my-2 my-lg-0">Cadastre-se</a>
+                    <!-- 'my-2 my-lg-0' controla as margens verticais em diferentes tamanhos de tela -->
+                </div>
+                <!-- Fim do conteúdo colapsável -->
+            </div>
+            <!-- Fim do container do cabeçalho -->
+        </nav>
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    <!-- Conteúdo principal da página -->
+    <main id="main-content" class="main-content">
+        <!-- O ID 'main-content' é o alvo do link "Pular para o conteúdo principal" -->
+        <section>
+            <!-- Seção principal do conteúdo -->
+            <div class="container">
+                <!-- Container Bootstrap para layout -->
+                <h2 class="mt-4 text-center">Dados Abertos sobre Resíduos Sólidos Urbanos</h2>
+                <!-- Título principal da seção. 'mt-4' adiciona margem no topo, 'text-center' centraliza -->
+                <p>Esta página contém informações estatísticas, históricas e gráficos sobre os Resíduos Sólidos Urbanos, acumulados no Brasil e na América Latina, destacando a importância da gestão adequada e dos Ecopontos de SP.</p>
+                <!-- Faixa de aviso sobre interatividade dos gráficos -->
+                <!-- Utiliza classes do Bootstrap 'alert alert-info' para criar uma caixa de destaque azul -->
+                <div class="alert alert-info text-center" role="alert">
+                    <!-- 'role="alert"' informa leitores de tela que esta é uma mensagem importante -->
+                    <h4 class="alert-heading">Interatividade dos Gráficos</h4>
+                    <!-- Título dentro da faixa de aviso -->
+                    <p class="mb-0"><strong>Dica:</strong> Os gráficos são interativos! Passe o mouse sobre as barras/fatias (em Desktops/Notebooks) ou toque nelas (em Celulares/Tablets) para visualizar os valores detalhados.</p>
+                    <!-- Texto explicativo sobre como interagir com os gráficos. 'mb-0' remove a margem inferior -->
+                </div>
+                <!-- Fim da faixa de aviso -->
+
+                <!-- Início dos contêineres dos gráficos -->
+
+                <!-- Gráfico 1: Geração vs Coleta -->
+                <div class="chart-container">
+                    <h3>Geração vs Coleta de Resíduos Sólidos Urbanos (Milhões de Toneladas)</h3>
+                    <div class="canvas-wrapper">
+                        <!-- O elemento <canvas> é onde o Chart.js desenhará o gráfico -->
+                        <canvas id="graficoGeracaoColeta" role="img" aria-label="Gráfico de barras mostrando a geração e coleta de resíduos sólidos urbanos no Brasil em 2022 e 2023."></canvas>
+                        <!-- 'role="img"' e 'aria-label' fornecem acessibilidade para o gráfico -->
+                    </div>
+                    <p class="chart-explanation">A linha vermelha indica a quantidade de lixo que <strong>não foi coletada</strong>, representando um grande volume que pode acabar poluindo o meio ambiente.</p>
+                    <!-- Explicação específica para este gráfico -->
+                </div>
+
+                <!-- Gráfico 2: Destinação ALC -->
+                <div class="chart-container">
+                    <h3>Destinação dos Resíduos Sólidos Urbanos na América Latina e no Caribe (2021)</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="graficoDestinoALC" role="img" aria-label="Gráfico de pizza mostrando a destinação dos resíduos sólidos urbanos na América Latina e Caribe em 2021."></canvas>
+                        <!-- Canvas para o gráfico de pizza -->
+                    </div>
+                    <p class="chart-explanation">Observe que, a grande porcentagem de lixo com <strong>destinação inadequada</strong> (vermelho). A reciclagem e a compostagem (amarelo), ainda representam uma pequena fração. Os ecopontos de SP, são essenciais para aumentar essa fração amarela!</p>
+                    <!-- Explicação específica para este gráfico -->
+                </div>
+
+                <!-- Gráfico 3: Taxa de Coleta -->
+                <div class="chart-container">
+                    <h3>Taxa de Coleta de Resíduos Sólidos Urbanos (%)</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="graficoTaxaColeta" role="img" aria-label="Gráfico de linha mostrando a evolução da taxa de coleta de resíduos sólidos urbanos no Brasil de 2022 a 2023."></canvas>
+                        <!-- Canvas para o gráfico de linha -->
+                    </div>
+                    <p class="chart-explanation">Embora a taxa de coleta possa ser alta, é fundamental garantir que o lixo coletado tenha o destino correto. Por esse motivo, é muito importante usar os Ecopontos para o descarte adequado de resíduos!</p>
+                    <!-- Explicação específica para este gráfico -->
+                </div>
+                <!-- Fim dos contêineres dos gráficos -->
+
+                <!-- Seção de Fontes dos Dados -->
+                <div class="data-source">
+                    <p><strong>Fontes dos Dados:</strong></p>
+                    <ul>
+                        <!-- Lista das fontes utilizadas para os dados dos gráficos -->
+                        <li>Brasil (2022): ABREMA - Panorama dos Resíduos Sólidos no Brasil 2023.</li>
+                        <li>Brasil (2023): ABREMA - Panorama dos Resíduos Sólidos no Brasil 2024.</li>
+                        <li>América Latina e Caribe (2021): BID - Hub de Resíduos Sólidos e Economia Circular (dados agregados para o ano)</li>
+                    </ul>
+                    <p><strong>Observação:</strong> Os dados mensais e para os anos de 2024 e 2025, não estavam disponíveis publicamente nas fontes consultadas até a data da pesquisa (Abril 2025). Os dados da América Latina e Caribe referem-se ao ano de 2021, o mais recente disponível no Hub do BID no momento da consulta. Esclarecemos que por motivos de Licitações, não conseguimos receber os dados referentes ao Ecoponto, e por esse mesmo motivo, utilizamos dados globais para chamar a atenção do nosso público, para a importância do descarte correto dos resíduos.</p>
+                    <!-- Observações importantes sobre a disponibilidade e origem dos dados -->
+                </div>
+                <!-- Fim da seção de fontes -->
+
+            </div>
+            <!-- Fim do container da seção -->
+        </section>
+        <!-- Fim da seção principal -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Rodapé da página -->
+    <!-- MODIFICADO (em style.css): Cor de fundo alterada para #000000 (preto forte) -->
+    <footer>
+        &copy; 2025 Cadê o Ecoponto.
+        <!-- Informação de copyright. O ano pode ser atualizado dinamicamente se necessário -->
+    </footer>
+    <!-- Fim do rodapé -->
+
+    <!-- Scripts JavaScript -->
+    <!-- É boa prática colocar scripts no final do body para não bloquear a renderização da página -->
+
+    <!-- jQuery (biblioteca JavaScript necessária para o funcionamento do Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- Popper.js (outra dependência do Bootstrap JS, usada para posicionar tooltips, popovers, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (componentes interativos do Bootstrap, como o menu responsivo) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Script personalizado (script.js) -->
+    <!-- Este arquivo DEVE conter o código JavaScript que busca os dados e inicializa os gráficos do Chart.js -->
+    <script src="script.js"></script>
+    <!-- É crucial garantir que este script contenha a lógica original e funcional para os gráficos -->
+
+    <!-- Script inline original (comentado por não ser mais necessário ou aplicável) -->
+    <!-- <script>
+        // O código original aqui tentava adicionar um listener a um botão que não existe mais no header modificado.
+        // const inscreverBtn = document.getElementById("inscreverBtn");
+        // if (inscreverBtn) {
+        //     // Lógica de redirecionamento ou outra ação que não se aplica mais aqui.
+        //     // inscreverBtn.addEventListener("click", function () {
+        //     // });
+        // }
+    </script> -->
+
+</body>
+<!-- Fim do corpo da página -->
+
+</html>
+<!-- Fim do documento HTML -->
+

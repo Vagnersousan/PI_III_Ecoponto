@@ -1,0 +1,108 @@
+.chart-container {
+    background-color: #ffffff; /* Fundo branco para o contêiner */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Wrapper para o canvas para ajudar no controle de tamanho */
+.canvas-wrapper {
+    width: 100%;
+    max-width: 100%; /* Garante que não exceda o contêiner pai */
+    position: relative; /* Necessário para Chart.js com maintainAspectRatio: false */
+    margin-bottom: 15px; /* Espaço entre gráfico e texto */
+}
+
+/* Definindo altura fixa para os canvas e garantindo largura responsiva */
+#graficoGeracaoColeta,
+#graficoDestinoALC,
+#graficoTaxaColeta {
+    display: block;
+    box-sizing: border-box;
+    height: 350px; /* Altura fixa para todos os gráficos */
+    width: 100% !important; /* Força a largura a 100% do wrapper */
+}
+
+.chart-explanation {
+    font-size: 0.9em;
+    color: #555;
+    text-align: justify;
+    width: 100%; /* Ocupa a largura do contêiner */
+    word-wrap: break-word; /* Garante quebra de linha */
+    overflow-wrap: break-word;
+}
+
+/* Estilo para a seção de fontes de dados */
+.data-source {
+    background-color: #d3cece; /* Fundo cinza escuro */
+    padding: 15px;
+    margin-top: 30px; /* Espaço acima da seção */
+    margin-bottom: 30px; /* Espaço abaixo antes do rodapé */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.85em;
+    color: #333;
+}
+
+.data-source p {
+    margin-bottom: 0.5rem;
+}
+
+.data-source ul {
+    margin-bottom: 1rem;
+    padding-left: 20px; /* Indentação da lista */
+}
+
+.data-source strong {
+    color: #000;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 15px;
+    }
+
+    #graficoGeracaoColeta,
+    #graficoDestinoALC,
+    #graficoTaxaColeta {
+        height: 300px; /* Reduz um pouco a altura em telas menores */
+    }
+
+    .data-source {
+        padding: 12px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-container {
+        padding: 10px;
+    }
+
+    #graficoGeracaoColeta,
+    #graficoDestinoALC,
+    #graficoTaxaColeta {
+        height: 250px; /* Reduz mais a altura em telas bem pequenas */
+    }
+
+    .chart-explanation {
+        font-size: 0.85em;
+    }
+
+    .data-source {
+        padding: 10px;
+        font-size: 0.75em;
+    }
+}

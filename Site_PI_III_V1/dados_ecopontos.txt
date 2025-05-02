@@ -1,0 +1,6 @@
+# Dados Coletados sobre Ecopontos SP
+
+- **Volume Total Coletado (2023):** Mais de 345.000 toneladas (Fonte: https://capital.sp.gov.br/web/subprefeituras/w/noticias/4626)
+- **Número de Ecopontos (2021):** 122 em operação (Fonte: Relatório TCM-SP TC/004855/2022)
+- **Número de Ecopontos (Atual):** 124 (Fonte: https://ecosampa.com/ecopontos/)
+- **Dados Detalhados (Mensal/Anual Histórico):** Ainda não encontrados. Relatório TCM-SP de 2021 indica que o dado de toneladas coletadas em ecopontos não constava ("Não consta") para os indicadores analisados naquele relatório.

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resíduos Aceitos</title>
+    <link rel="icon" type="image/png" href="imagens/Logo Colorido Redondo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <div class="watermark"></div>
+    <style>
+    .btn-primary {
+            background-color: #28a745; /* Verde do Bootstrap */
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838; /* Verde mais escuro */
+            border-color: #218838;
+        }
+    /* Estilos para o fundo */
+        body {
+            background-color: #d4edda; /* Verde mais claro */
+            overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+            color: #333; /* Cor do texto */
+            font-family: 'Arial', sans-serif; /* Fonte do texto */
+        }
+    </style>    
+    <header style="background-color: black; color: white;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+               <a href="cadastro.html"><button id="inscreverBtn" class="btn btn-primary ml-auto mr-2">Cadastre-se</button></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte correto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Dados_Abertos.html">Dados Abertos</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <h2>Tipos de Resíduos Aceitos no Ecoponto</h2>
+            <p>Ecoponto é local para descarte correto de entulho. Pequenos volumes de entulho e móveis velhos não
+                precisam ser deixados nas ruas. Confira o que é permitido levar aos ecopontos e os endereços dos pontos
+                de entrega voluntária mantidos pela Prefeitura. Fez uma pequena obra em casa e não sabe o que fazer com
+                o entulho que sobrou da reforma? Muitas vezes não é necessário contratar uma caçamba. O mesmo acontece
+                para móveis velhos. Para combater o descarte irregular de lixo, a Prefeitura de São Paulo, por meio da
+                Secretaria Municipal das Subprefeituras (SMSUB), disponibiliza áreas para a deposição regular dos
+                resíduos de construção e demolição de pequenos geradores, além de facilitar e incentivar a reciclagem
+                desses materiais. É sempre bom lembrar que descarte irregular de lixo é crime.</p>
+            <p>Os Ecopontos são locais de entrega voluntária de pequenos volumes de entulho (até 1 m³), grandes objetos
+                (móveis, poda de árvores etc.) e resíduos recicláveis. Nos Ecopontos, o munícipe poderá dispor o
+                material gratuitamente em caçambas distintas para cada tipo de resíduo. A Prefeitura de São Paulo
+                pretende aumentar o número de unidades.</p>
+            <p>O que pode ser descartado?</p>
+            <ul>
+                <li>Móveis velhos (camas, armários, sofás, etc)</li>
+                <li>Colchões</li>
+                <li>Eletrodomésticos quebrados</li>
+                <li>Pedaços de madeira e metal</li>
+            </ul>
+            <p>Todos os ecopontos funcionam de segunda a sábado, das 6h às 22h, e aos domingos e feriados, das 6h às
+                18h. Mais informações também podem ser obtidas pela Central de Atendimento 156.</p>
+            <p>Este conteúdo foi extraído do site da prefeitura disponível em <a
+                    href="https://www.capital.sp.gov.br/w/noticia/encontre-o-ecoponto-mais-perto-de-sua-casa#:~:text=Os%20Ecopontos%20s%C3%A3o%20locais%20de,para%20cada%20tipo%20de%20res%C3%ADduo">capital.sp.gov.br</a>.
+                Todos os créditos são do site mencionado.</p>
+            <img src="imagens\imagem2.jpg" alt="Imagem 2">
+        </div>
+    </main>
+    <footer style="background-color: black; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        &copy; 2025 Cadê o Ecoponto.
+    </footer>
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('inscreverBtn').addEventListener('click', function () {
+            document.getElementById('formularioInscricao').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
