@@ -1,0 +1,25 @@
+# Dados Coletados - Resíduos Sólidos Brasil (Ano-base 2022)
+
+Fonte Principal: ABREMA - Panorama dos Resíduos Sólidos no Brasil 2023 (https://www.abrema.org.br/wp-content/uploads/dlm_uploads/2024/03/Panorama_2023_P1.pdf)
+
+**Resíduos Sólidos Urbanos (RSU) - 2022:**
+
+*   **Geração Total:** 77,1 milhões de toneladas/ano (aprox. 211 mil toneladas/dia)
+*   **Geração Per Capita:** 1,04 kg/habitante/dia (aprox. 380 kg/habitante/ano)
+*   **Coleta Total:** 71,7 milhões de toneladas/ano (aprox. 196 mil toneladas/dia)
+*   **Taxa de Coleta:** 93,0%
+*   **Coleta Per Capita:** 0,968 kg/habitante/dia (aprox. 353 kg/habitante/ano)
+*   **Disposição Final Adequada (Aterros Sanitários):** 61,1% do coletado (43,8 milhões de toneladas/ano)
+*   **Disposição Final Inadequada (Lixões, etc.):** 38,9% do coletado (27,9 milhões de toneladas/ano)
+
+**Outros Resíduos - 2022:**
+
+*   **Resíduos de Construção Civil e Demolição (RCD/RCC):** 45 milhões de toneladas/ano
+*   **Resíduos de Serviços de Saúde (RSS):** 307 mil toneladas/ano
+
+**Observações:**
+
+*   Os dados são anuais para 2022. O relatório não fornece detalhamento mensal.
+*   Os dados de coleta seletiva no relatório referem-se ao ano-base 2021 (SNIS).
+*   As projeções foram corrigidas com base nos dados do Censo Demográfico 2022 do IBGE.
+

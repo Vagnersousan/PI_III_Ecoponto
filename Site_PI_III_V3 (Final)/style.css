@@ -1,0 +1,473 @@
+/* --- Comentários Gerais --- */
+/* Este arquivo CSS contém os estilos principais para o site "Cadê o Ecoponto". */
+/* As regras são organizadas por seletores gerais, componentes específicos e media queries para responsividade. */
+/* Foram feitas modificações para melhorar a acessibilidade (contraste, foco) e modernizar o visual, com ajustes baseados no feedback do usuário. */
+
+/* --- Estilos Gerais --- */
+body {
+    /* Define a fonte padrão para todo o site */
+    font-family: 'Arial', sans-serif;
+    /* Remove margens padrão do navegador */
+    margin: 0;
+    /* Remove preenchimentos padrão */
+    padding: 0;
+    /* Cor principal do texto (cinza escuro para bom contraste com fundo claro) */
+    color: #333;
+    /* Cor de fundo principal (verde bem claro, melhor contraste que o original) */
+    background-color: #e9f5e9;
+    /* Usa flexbox para organizar o layout principal (header, main, footer) */
+    display: flex;
+    flex-direction: column;
+    /* Garante que o corpo ocupe pelo menos 100% da altura da viewport */
+    min-height: 100vh;
+    /* Adiciona espaçamento no topo para compensar o header fixo */
+    padding-top: 70px; /* Ajustar conforme a altura final do header */
+    /* Adiciona espaçamento no rodapé para compensar o footer fixo */
+    padding-bottom: 60px; /* Ajustar conforme a altura final do footer */
+}
+
+/* --- Marca d'água --- */
+.watermark {
+    /* Posição fixa para ficar sempre visível, independente da rolagem */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Ocupa toda a tela */
+    width: 100%;
+    height: 100%;
+    /* Impede que a marca d'água capture eventos do mouse (cliques, etc.) */
+    pointer-events: none;
+    /* Define a imagem da marca d'água */
+    background-image: url("imagens/Logo.png");
+    /* Ajusta a imagem para caber dentro do container, mantendo proporção */
+    background-size: contain;
+    /* Não repetir a imagem */
+    background-repeat: no-repeat;
+    /* Centraliza a imagem */
+    background-position: center;
+    /* Opacidade bem baixa para não atrapalhar a legibilidade do conteúdo */
+    opacity: 0.08;
+    /* Garante que a marca d'água fique atrás de todo o conteúdo */
+    z-index: -1;
+}
+
+/* --- Cabeçalho e Navegação --- */
+header {
+    /* Cor de fundo do cabeçalho (MODIFICADO para Verde escuro/Azul petróleo moderno) */
+    background-color: #004d40;
+    /* Cor do texto no cabeçalho */
+    color: #fff;
+    /* Posição fixa no topo da página */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Garante que o header fique acima da maioria dos outros elementos */
+    z-index: 1030;
+    /* Sombra sutil para destacar o header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    /* Ajusta o preenchimento vertical da barra de navegação */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    /* Cor dos links na navegação (branco semi-transparente) */
+    color: rgba(255, 255, 255, 0.85);
+    /* Adiciona transição suave para efeitos de hover/focus */
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    /* Cor dos links ao passar o mouse ou focar (branco sólido) */
+    color: #fff;
+    /* Adiciona sublinhado para consistência */
+    text-decoration: underline;
+    /* Adiciona um contorno claro para indicar foco (acessibilidade) */
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+    border-radius: 2px; /* Bordas arredondadas para o contorno */
+}
+
+/* Estilo para o item ativo na navegação */
+.navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: #fff; /* Cor branca sólida para o link ativo */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.navbar-toggler {
+    /* Cor da borda do botão do menu mobile (hamburger) */
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler:focus {
+    /* Estilo de foco para o botão do menu mobile */
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+    box-shadow: none; /* Remove sombra padrão do Bootstrap se houver */
+}
+
+.navbar-toggler-icon {
+    /* Ícone do botão do menu mobile (SVG inline para melhor controle e cor) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* --- Conteúdo Principal --- */
+main {
+    /* Faz o conteúdo principal ocupar o espaço flexível restante entre header e footer */
+    flex: 1;
+    /* Adiciona preenchimento interno para afastar o conteúdo das bordas */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.main-content {
+    /* Preenchimento vertical dentro da seção de conteúdo principal */
+    padding: 1rem 0;
+}
+
+/* --- Títulos --- */
+h1, h2, h3, h4, h5, h6 {
+    /* Cor dos títulos (um pouco mais escura que o texto normal para destaque) */
+    color: #222;
+    /* Define a espessura da fonte como negrito */
+    font-weight: bold;
+    /* Margem inferior para separar dos parágrafos seguintes */
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.2rem; /* Tamanho maior para o título principal */
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+/* --- Parágrafos e Links --- */
+p {
+    /* Espaçamento entre linhas para melhor legibilidade */
+    line-height: 1.6;
+    /* Margem inferior para separar parágrafos */
+    margin-bottom: 1rem;
+}
+
+a {
+    /* Cor padrão para links (azul acessível) */
+    color: #0056b3;
+    /* Adiciona sublinhado ao passar o mouse/focar para indicar interatividade */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.2s ease-in-out; /* Transição suave */
+}
+
+a:hover,
+a:focus {
+    /* Cor do link ao passar o mouse ou focar (azul mais escuro) */
+    color: #003d80;
+    /* Adiciona sublinhado */
+    text-decoration: underline;
+    /* Estilo de foco claro */
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* --- Botões --- */
+.btn {
+    /* Remove bordas arredondadas padrão para um visual mais moderno */
+    border-radius: 4px;
+    /* Adiciona preenchimento */
+    padding: 0.5rem 1rem;
+    /* Transição suave para efeitos */
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-primary {
+    /* Cor de fundo do botão primário (verde) */
+    background-color: #28a745;
+    /* Cor da borda */
+    border-color: #28a745;
+    /* Cor do texto (branco para contraste) */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    /* Cor de fundo ao passar o mouse (verde mais escuro) */
+    background-color: #218838;
+    /* Cor da borda */
+    border-color: #1e7e34;
+    color: #fff;
+}
+
+.btn:focus,
+.btn-primary:focus {
+    /* Estilo de foco para botões (sombra externa) */
+    outline: none; /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5); /* Sombra verde semi-transparente */
+}
+
+/* --- Formulários --- */
+.form-control {
+    /* Cor de fundo dos campos de formulário (branco com leve transparência) */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Borda sutil */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    /* Estilo de foco para campos de formulário */
+    border-color: #80bdff; /* Borda azul clara */
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Sombra azul semi-transparente */
+    background-color: #fff; /* Fundo branco sólido ao focar */
+}
+
+label {
+    /* Deixa os rótulos em negrito para destaque */
+    font-weight: bold;
+    /* Margem inferior para separar do campo */
+    margin-bottom: 0.5rem;
+    display: block; /* Garante que o label ocupe a linha */
+}
+
+/* --- Rodapé --- */
+footer {
+    /* Cor de fundo do rodapé (MODIFICADO para verde escuro acessível) */
+    background-color: #1a3a34; /* Verde escuro, bom contraste com texto branco */
+    /* Cor do texto (branco para alto contraste) */
+    color: #FFFFFF;
+    text-align: center;
+    /* Preenchimento vertical */
+    padding: 15px 0;
+    /* Posição fixa na parte inferior */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Garante que fique acima da marca d'água, mas abaixo de modais, etc. */
+    z-index: 1020;
+    /* Tamanho da fonte ligeiramente menor */
+    font-size: 0.9em;
+}
+
+/* --- Link "Pular para o conteúdo" (Acessibilidade) --- */
+.skip-link {
+    position: absolute;
+    left: -9999px; /* Esconde fora da tela por padrão */
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+    background-color: #f1f1f1; /* Fundo claro */
+    color: #333; /* Texto escuro */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:active {
+    left: 10px; /* Traz para a tela quando focado */
+    top: 10px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 9999; /* Garante que fique visível sobre outros elementos */
+    outline: 2px solid #0056b3; /* Contorno de foco */
+    outline-offset: 2px;
+}
+
+/* --- Estilos para Vídeos Incorporados e Imagens --- */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 1rem; /* Espaço abaixo do vídeo/imagem */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 4px;
+}
+
+.embed-responsive::before {
+    display: block;
+    content: "";
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-responsive-16by9::before {
+    padding-top: 56.25%; /* Proporção 16:9 */
+}
+
+/* Ajuste para imagens não ficarem muito grandes em telas maiores */
+.main-content img {
+    display: block; /* Para aplicar margem auto */
+    max-width: 100%; /* Garante responsividade */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* --- Ajustes de Layout e Responsividade --- */
+
+/* --- Media Queries (Ajustes para diferentes tamanhos de tela) --- */
+
+/* Telas Pequenas (Mobile) */
+@media (max-width: 768px) {
+    body {
+        /* Ajusta o padding para header/footer menores em telas pequenas */
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reduz tamanho do H1 */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduz tamanho do H2 */
+    }
+
+    .navbar-nav {
+        /* Adiciona margem acima dos links no menu mobile colapsado */
+        margin-top: 0.5rem;
+    }
+
+    .main-content {
+        /* Reduz o preenchimento lateral em telas menores */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Ajustes específicos para o formulário de filtro no mapa */
+    #form-filtro {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: stretch; /* Faz os elementos ocuparem a largura total */
+    }
+
+    #form-filtro .form-group {
+        margin-bottom: 10px; /* Espaço entre label/select e botão */
+        width: 100%;
+    }
+
+    #form-filtro label {
+        margin-bottom: 5px;
+    }
+
+    #form-filtro select,
+    #form-filtro button {
+        width: 100%; /* Ocupa largura total */
+        margin-left: 0; /* Remove margem esquerda do botão */
+        margin-top: 5px; /* Adiciona espaço acima do botão */
+    }
+
+@media (min-width: 769px) {
+    .container {
+        max-width: 1140px; /* Limita a largura do container */
+    }
+
+    /* Limita a largura máxima de imagens e vídeos em telas maiores */
+    .main-content img,
+    .main-content .embed-responsive {
+        max-width: 800px; /* Define uma largura máxima */
+        margin-left: auto; /* Centraliza */
+        margin-right: auto;
+    }
+
+    /* Ajuste específico para gráficos em Dados Abertos (se necessário manter maior) */
+    #dados-residuos .canvas-wrapper {
+        height: 50vh; /* Altura para desktop/tablet */
+        max-height: 450px;
+    }
+    /* Garante que a limitação geral não afete os gráficos se eles precisarem ser mais largos */
+    #dados-residuos .embed-responsive { /* Se houver vídeos/iframes em dados abertos */
+        max-width: none; /* Remove a limitação de 800px */
+    }
+    #dados-residuos img { /* Se houver imagens em dados abertos */
+        max-width: none; /* Remove a limitação de 800px */
+    }
+
+}
+
+/* --- Estilos Específicos (Ex: Toggle de Senha) --- */
+#togglePassword {
+    /* Torna o ícone do olho clicável */
+    cursor: pointer;
+    /* Alinhamento vertical dentro do input-group */
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem; /* Ajusta padding */
+    background-color: #e9ecef; /* Fundo cinza claro */
+    border: 1px solid #ced4da; /* Borda igual ao input */
+    border-left: none; /* Remove borda esquerda para juntar ao input */
+    border-radius: 0 4px 4px 0; /* Arredonda cantos direitos */
+}
+
+#togglePassword i {
+    color: #495057; /* Cor do ícone */
+}
+
+#togglePassword:hover i {
+    color: #333; /* Escurece ícone no hover */
+}
+
+/* --- Melhorias Gráficos (Desktop) --- */
+/* MODIFICADO: Adicionado para limitar a largura dos gráficos em telas grandes, melhorando a visualização */
+@media (min-width: 992px) { /* Aplica-se a dispositivos grandes (desktops, 992px e acima) */
+  .chart-container {
+    max-width: 800px; /* Limita a largura máxima do container do gráfico */
+    margin-left: auto; /* Centraliza o container na página */
+    margin-right: auto;
+  }
+  /* O elemento .canvas-wrapper dentro de .chart-container já possui width: 100% (definido inline no HTML), */
+  /* o que significa que ele se ajustará automaticamente à largura máxima de 800px definida para o .chart-container. */
+  /* Não foi necessário definir altura mínima aqui, pois a biblioteca Chart.js gerencia a proporção. */
+  /* .canvas-wrapper {
+     min-height: 350px; 
+  } */
+}
+}
+
+/* --- Ajuste Ícone Senha (Desktop) --- */
+/* MODIFICADO: Ajusta padding e line-height do botão de olho em telas maiores, removendo height e !important */
+@media (min-width: 992px) { /* Aplica-se a desktops e telas grandes */
+    .input-group-append #togglePassword {
+        /* height: calc(1.5em + 0.75rem + 2px) !important; */ /* Altura forçada REMOVIDA */
+        /* Ajusta padding vertical para tentar alinhar visualmente */
+        padding-top: 0.3rem; /* Valor ligeiramente menor que o padrão .375rem */
+        padding-bottom: 0.3rem; /* Valor ligeiramente menor que o padrão .375rem */
+        /* Mantém flexbox para centralizar o ícone */
+        display: flex;
+        align-items: center;
+        /* Garante line-height igual ao input */
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
+    .input-group-append #togglePassword i {
+        font-size: 1rem; /* Mantém tamanho do ícone */
+        line-height: 1; /* Garante que line-height do ícone não interfira */
+        margin: 0;
+    }
+}

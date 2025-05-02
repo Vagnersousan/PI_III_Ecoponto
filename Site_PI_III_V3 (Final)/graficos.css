@@ -1,0 +1,135 @@
+.chart-container {
+    background-color: #ffffff; /* Fundo branco para o contêiner */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Wrapper para o canvas para ajudar no controle de tamanho */
+.canvas-wrapper {
+    width: 100%;
+    max-width: 100%; /* Garante que não exceda o contêiner pai */
+    position: relative; /* Necessário para Chart.js com maintainAspectRatio: false */
+    margin-bottom: 15px; /* Espaço entre gráfico e texto */
+}
+
+/* Definindo altura fixa para os canvas e garantindo largura responsiva - REMOVIDO ALTURA FIXA */
+#graficoGeracaoColeta,
+#graficoDestinoALC,
+#graficoTaxaColeta {
+    display: block;
+    box-sizing: border-box;
+    height: 350px;
+    width: 100% !important; /* Força a largura a 100% do wrapper */
+}
+
+.chart-explanation {
+    font-size: 0.9em;
+    color: #555;
+    text-align: justify;
+    width: 100%; /* Ocupa a largura do contêiner */
+    word-wrap: break-word; /* Garante quebra de linha */
+    overflow-wrap: break-word;
+}
+
+/* Estilo para a seção de fontes de dados */
+.data-source {
+    background-color: #d3cece; /* Fundo cinza escuro */
+    padding: 15px;
+    margin-top: 30px; /* Espaço acima da seção */
+    margin-bottom: 30px; /* Espaço abaixo antes do rodapé */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.85em;
+    color: #333;
+}
+
+.data-source p {
+    margin-bottom: 0.5rem;
+}
+
+.data-source ul {
+    margin-bottom: 1rem;
+    padding-left: 20px; /* Indentação da lista */
+}
+
+.data-source strong {
+    color: #000;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 15px;
+    }
+
+    #graficoGeracaoColeta,
+    #graficoDestinoALC,
+    #graficoTaxaColeta {
+    height: 300px; 
+    }
+
+    .data-source {
+        padding: 12px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-container {
+        padding: 10px;
+    }
+
+    #graficoGeracaoColeta,
+    #graficoDestinoALC,
+    #graficoTaxaColeta {
+    height: 250px;
+    }
+
+    .chart-explanation {
+        font-size: 0.85em;
+    }
+
+    .data-source {
+        padding: 10px;
+        font-size: 0.75em;
+    }
+}
+/* Definindo proporção e largura responsiva para os canvas - ALTURA FIXA REMOVIDA */
+#graficoGeracaoColeta,
+#graficoDestinoALC,
+#graficoTaxaColeta {
+    display: block;
+    box-sizing: border-box;
+    height: 350px;
+    width: 100% !important; /* Força a largura a 100% do wrapper */
+    /* MODIFICADO: Adicionado aspect-ratio para manter proporção e evitar achatamento */
+    /* O gráfico de rosca (DestinoALC) geralmente fica melhor com 1/1 (quadrado) */
+    /* Os gráficos de barras (GeracaoColeta, TaxaColeta) geralmente ficam melhor com 2/1 ou 16/9 */
+}
+
+/* MODIFICADO: Proporção específica para os gráficos de barras */
+#graficoGeracaoColeta,
+#graficoTaxaColeta {
+    aspect-ratio: 2 / 1; /* Proporção Largura/Altura (ex: 800px largura -> 400px altura) */
+}
+
+/* MODIFICADO: Proporção específica para o gráfico de rosca */
+#graficoDestinoALC {
+    aspect-ratio: 1 / 1; /* Proporção Largura/Altura (quadrado, ideal para rosca/pizza) */
+    /* Adiciona uma altura máxima para o gráfico de rosca não ficar excessivamente grande em telas muito largas */
+    max-height: 450px;
+    margin-left: auto; /* Centraliza se a largura for limitada pela altura máxima */
+    margin-right: auto;
+}

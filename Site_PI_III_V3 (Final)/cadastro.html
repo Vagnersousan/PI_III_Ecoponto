@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma principal da página como Português do Brasil -->
+
+<head>
+    <!-- Cabeçalho do documento -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Configura a viewport para responsividade, shrink-to-fit=no evita encolhimento em alguns navegadores iOS -->
+    <title>Cadastro - Cadê o Ecoponto</title>
+    <!-- Título descritivo da página -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <!-- Ícone da página (favicon) -->
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Ícones do Bootstrap (usado para o olho da senha) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS personalizado principal (contém as melhorias de acessibilidade e design) -->
+
+    <!-- Estilos CSS embutidos específicos para esta página -->
+    <style>
+        /* Estilos específicos para o formulário de cadastro */
+        #formularioInscricao {
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente para destacar o formulário */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+        }
+
+        /* Remove a imagem de fundo específica que estava aqui, pois o style.css já tem a marca d'água */
+        /* A cor de fundo do body já é definida em style.css */
+
+        /* O estilo .form-control já está definido de forma mais acessível em style.css */
+
+        /* Estilo para o grupo do campo de senha */
+        .input-group {
+            position: relative; /* Necessário para o posicionamento do botão de toggle */
+        }
+
+        /* O estilo #togglePassword está definido em style.css */
+
+    </style>
+</head>
+
+<body>
+    <!-- Corpo do documento -->
+
+    <!-- Link para pular navegação (acessibilidade) -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho (reutilizando a estrutura padrão do site) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Abrir/Fechar Navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte
+                                correto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no
+                                Ecoponto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Dados_Abertos.html">Dados Abertos</a>
+                        </li>
+                    </ul>
+                    <!-- Botão Cadastre-se não faz sentido nesta página, removido do header -->
+                    <!-- <a href="cadastro.html" class="btn btn-primary my-2 my-lg-0">Cadastre-se</a> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    <!-- Conteúdo principal da página -->
+    <main id="main-content" class="main-content">
+        <!-- ID para o link "Pular para o conteúdo" -->
+        <div class="container">
+            <!-- Container para centralizar e limitar largura -->
+
+            <h1 class="text-center">Faça seu Cadastro</h1>
+            <!-- Título principal da página -->
+            <p class="text-center">Para receber dicas e novidades sobre descarte consciente!</p>
+            <!-- Texto introdutório -->
+
+            <!-- Formulário de Cadastro -->
+            <form id="formularioInscricao" method="POST" action="cadastrar_usuario.php" aria-labelledby="titulo-cadastro">
+                <!-- aria-labelledby associa o título ao formulário -->
+                <h2 id="titulo-cadastro" class="sr-only">Formulário de Cadastro</h2> <!-- Título oculto para leitores de tela -->
+
+                <!-- Campo Nome Completo -->
+                <div class="form-group">
+                    <label for="inputNome">Nome Completo:</label>
+                    <!-- Label associado explicitamente ao input via 'for' -->
+                    <input type="text" class="form-control" id="inputNome" name="inputNome" required
+                        aria-required="true" autocomplete="name">
+                    <!-- id adicionado, required e aria-required para acessibilidade, autocomplete para usabilidade -->
+                </div>
+
+                <!-- Campo Endereço -->
+                <div class="form-group">
+                    <label for="inputEndereco">Endereço:</label>
+                    <input type="text" class="form-control" id="inputEndereco" name="inputEndereco" required
+                        aria-required="true" autocomplete="street-address">
+                    <!-- id adicionado, required/aria-required, autocomplete -->
+                </div>
+
+                <!-- Campo Complemento -->
+                <div class="form-group">
+                    <label for="inputComplemento">Complemento:</label>
+                    <input type="text" class="form-control" id="inputComplemento" name="inputComplemento"
+                        autocomplete="address-line2">
+                    <!-- autocomplete adicionado -->
+                </div>
+
+                <!-- Campo CEP -->
+                <div class="form-group">
+                    <label for="inputCEP">CEP:</label>
+                    <input type="text" class="form-control" id="inputCEP" name="inputCEP" required aria-required="true"
+                        pattern="\d{5}-?\d{3}" title="Digite o CEP no formato 00000-000 ou 00000000" autocomplete="postal-code">
+                    <!-- pattern para validação básica, title para dica, autocomplete -->
+                </div>
+
+                <!-- Campo Bairro -->
+                <div class="form-group">
+                    <label for="inputBairro">Bairro:</label>
+                    <input type="text" class="form-control" id="inputBairro" name="inputBairro" autocomplete="address-level2">
+                    <!-- autocomplete adicionado (pode variar dependendo da granularidade desejada) -->
+                </div>
+
+                <!-- Campo E-mail -->
+                <div class="form-group">
+                    <label for="inputEmail">E-mail:</label>
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" required
+                        aria-required="true" autocomplete="email">
+                    <!-- id adicionado, required/aria-required, autocomplete -->
+                </div>
+
+                <!-- Campo Senha -->
+                <div class="form-group">
+                    <label for="inputSenha">Senha:</label>
+                    <div class="input-group">
+                        <!-- input-group para agrupar input e botão de toggle -->
+                        <input type="password" class="form-control" id="inputSenha" name="inputSenha" required
+                            aria-required="true" autocomplete="new-password">
+                        <!-- autocomplete="new-password" para sugerir criação de senha -->
+                        <div class="input-group-append">
+                            <!-- Botão para mostrar/ocultar senha -->
+                            <button type="button" class="btn btn-outline-secondary" id="togglePassword"
+                                aria-label="Mostrar senha como texto" aria-pressed="false">
+                                <!-- Usando <button> para semântica e acessibilidade -->
+                                <!-- aria-label descreve a ação, aria-pressed indica o estado -->
+                                <i class="bi bi-eye-fill" aria-hidden="true"></i>
+                                <!-- Ícone visual, aria-hidden para não ser lido por leitores de tela -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo de Autorização (Checkbox) -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="autorizacaoCheck" name="autorizacaoCheck" required
+                        aria-required="true">
+                    <!-- name adicionado, required/aria-required -->
+                    <label class="form-check-label" for="autorizacaoCheck">Autorizo o uso das informações fornecidas para
+                        recebimento de dicas e novidades.</label>
+                    <!-- Texto do label mais claro -->
+                </div>
+
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn btn-primary btn-lg">Enviar Cadastro</button>
+                <!-- btn-lg para maior destaque, texto mais descritivo -->
+            </form>
+            <!-- Fim do formulário -->
+
+        </div>
+        <!-- Fim do container -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Marca d'água -->
+    <div class="watermark"></div>
+
+    <!-- Rodapé (reutilizando a estrutura padrão) -->
+    <footer>
+        &copy; 2025 Cadê o Ecoponto.
+        <!-- Ano atualizado -->
+    </footer>
+    <!-- Fim do rodapé -->
+
+    <!-- Scripts JavaScript -->
+    <!-- jQuery (necessário para Bootstrap JS e script de toggle) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Popper.js (dependência Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Script para funcionalidade de mostrar/esconder senha -->
+    <script>
+        // Executa quando o documento HTML estiver completamente carregado e pronto
+        $(document).ready(function () {
+            // Seleciona o botão de toggle da senha
+            const toggleButton = $("#togglePassword");
+            // Seleciona o campo de input da senha
+            const passwordInput = $("#inputSenha");
+            // Seleciona o ícone dentro do botão
+            const icon = toggleButton.find("i");
+
+            // Adiciona um evento de clique ao botão
+            toggleButton.click(function () {
+                // Verifica qual o tipo atual do campo de senha
+                if (passwordInput.attr("type") === "password") {
+                    // Se for 'password', muda para 'text' para mostrar a senha
+                    passwordInput.attr("type", "text");
+                    // Muda o ícone para o olho cortado (senha visível)
+                    icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+                    // Atualiza o aria-label e aria-pressed para acessibilidade
+                    toggleButton.attr("aria-label", "Ocultar senha");
+                    toggleButton.attr("aria-pressed", "true");
+                } else {
+                    // Se for 'text', muda de volta para 'password' para ocultar a senha
+                    passwordInput.attr("type", "password");
+                    // Muda o ícone de volta para o olho normal (senha oculta)
+                    icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+                    // Atualiza o aria-label e aria-pressed para acessibilidade
+                    toggleButton.attr("aria-label", "Mostrar senha como texto");
+                    toggleButton.attr("aria-pressed", "false");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+

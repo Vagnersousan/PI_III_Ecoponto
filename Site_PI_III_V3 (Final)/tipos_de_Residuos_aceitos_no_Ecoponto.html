@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma principal da página como Português do Brasil -->
+
+<head>
+    <!-- Cabeçalho do documento -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade -->
+    <title>Resíduos Aceitos nos Ecopontos - Cadê o Ecoponto</title>
+    <!-- Título descritivo da página -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <!-- Ícone da página (favicon) -->
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS personalizado principal (contém as melhorias de acessibilidade e design) -->
+
+    <!-- Estilos CSS embutidos específicos para esta página (se necessário) -->
+    <style>
+        /* Garante que imagens dentro do main content sejam responsivas */
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Evita espaços extras abaixo da imagem */
+            margin: 1.5rem auto; /* Centraliza a imagem e adiciona margem vertical maior */
+            border: 1px solid #ddd; /* Borda sutil */
+            border-radius: 4px;
+        }
+
+        /* Estilo para listas de itens aceitos/não aceitos */
+        .list-group-item {
+            background-color: rgba(255, 255, 255, 0.6); /* Fundo levemente transparente */
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Corpo do documento -->
+
+    <!-- Link para pular navegação (acessibilidade) -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho (reutilizando a estrutura padrão do site) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Abrir/Fechar Navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte
+                                correto</a>
+                        </li>
+                        <li class="nav-item active">
+                            <!-- Marca este item como ativo -->
+                            <a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no
+                                Ecoponto <span class="sr-only">(página atual)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Dados_Abertos.html">Dados Abertos</a>
+                        </li>
+                    </ul>
+                    <a href="cadastro.html" class="btn btn-primary my-2 my-lg-0">Cadastre-se</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    <!-- Conteúdo principal da página -->
+    <main id="main-content" class="main-content">
+        <!-- ID para o link "Pular para o conteúdo" -->
+        <div class="container">
+            <!-- Container para centralizar e limitar largura -->
+
+            <!-- Seção principal sobre resíduos aceitos -->
+            <section id="residuos-aceitos" class="mb-4">
+                <h1 class="mt-4">Tipos de Resíduos Aceitos no Ecoponto</h1>
+                <!-- Título principal da página -->
+
+                <p>Ecoponto é o local adequado para o descarte correto de entulho e outros materiais. Pequenos volumes de
+                    entulho e móveis velhos não precisam ser deixados nas ruas, evitando multas e contribuindo para um
+                    ambiente mais limpo.</p>
+                <p>Confira o que é permitido levar aos ecopontos e os endereços dos pontos de entrega voluntária mantidos
+                    pela Prefeitura. Fez uma pequena obra em casa e não sabe o que fazer com o entulho que sobrou da
+                    reforma? Muitas vezes não é necessário contratar uma caçamba.</p>
+                <p>Para combater o descarte irregular de lixo (que é crime ambiental!), a Prefeitura de São Paulo,
+                    por meio da Secretaria Municipal das Subprefeituras (SMSUB), disponibiliza áreas para a deposição
+                    regular dos resíduos de construção e demolição de pequenos geradores (até 1m³), além de facilitar e
+                    incentivar a reciclagem desses materiais.</p>
+
+                <h2 class="mt-4">Funcionamento e Materiais</h2>
+                <!-- Subtítulo -->
+                <p>Os Ecopontos são locais de entrega voluntária de:</p>
+                <ul>
+                    <li>Pequenos volumes de entulho (até 1 m³, equivalente a uma caixa d'água de mil litros)</li>
+                    <li>Grandes objetos (móveis como sofás, armários, colchões; podas de árvores)</li>
+                    <li>Resíduos recicláveis (papel, plástico, vidro, metal)</li>
+                    <li>Pedaços de madeira</li>
+                    <li>Eletrodomésticos quebrados</li>
+                </ul>
+                <p>Nos Ecopontos, o munícipe pode dispor o material gratuitamente em caçambas distintas para cada tipo de
+                    resíduo, garantindo a destinação correta. A Prefeitura de São Paulo busca continuamente aumentar o
+                    número de unidades disponíveis.</p>
+
+                <!-- Informações sobre horário e contato -->
+                <div class="alert alert-info" role="alert">
+                    <h4 class="alert-heading">Horário de Funcionamento e Contato</h4>
+                    <p>Todos os ecopontos funcionam de <strong>segunda a sábado, das 6h às 22h</strong>, e aos
+                        <strong>domingos e feriados, das 6h às 18h</strong>.</p>
+                    <hr>
+                    <p class="mb-0">Mais informações podem ser obtidas pela Central de Atendimento <strong>156</strong>.</p>
+                </div>
+
+                <!-- Fonte da informação -->
+                <p class="text-muted small mt-4">
+                    <!-- Texto menor e com cor suave para a fonte -->
+                    Este conteúdo foi adaptado do site da prefeitura de São Paulo, disponível em
+                    <a href="https://www.capital.sp.gov.br/w/noticia/encontre-o-ecoponto-mais-perto-de-sua-casa#:~:text=Os%20Ecopontos%20s%C3%A3o%20locais%20de,para%20cada%20tipo%20de%20res%C3%ADduo"
+                        target="_blank" rel="noopener noreferrer">capital.sp.gov.br</a>.
+                    <!-- target="_blank" abre em nova aba, rel previne vulnerabilidades -->
+                    Todos os créditos pertencem à fonte original.
+                </p>
+
+                <!-- Imagem Ilustrativa -->
+                <img src="imagens/imagem2.jpg" alt="Entrada de um Ecoponto com caçambas para diferentes tipos de materiais e sinalização.">
+                <!-- Texto alternativo descritivo adicionado -->
+
+            </section>
+            <!-- Fim da seção principal -->
+
+        </div>
+        <!-- Fim do container -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <!-- Marca d'água -->
+    <div class="watermark"></div>
+
+    <!-- Rodapé (reutilizando a estrutura padrão) -->
+    <footer>
+        &copy; 2025 Cadê o Ecoponto.
+        <!-- Ano atualizado -->
+    </footer>
+    <!-- Fim do rodapé -->
+
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- jQuery (slim) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <!-- <script src="script.js"></script> -->
+    <!-- Script principal comentado, pois parece não ser necessário nesta página específica -->
+
+    <!-- Script JS específico da página (se houver) -->
+    <script>
+        // Código JS específico para esta página pode ser adicionado aqui.
+        // O script original que tentava mostrar um formulário não se aplica aqui.
+    </script>
+
+</body>
+
+</html>
+
