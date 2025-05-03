@@ -449,25 +449,3 @@ footer {
   } */
 }
 }
-
-/* --- Ajuste Ícone Senha (Desktop) --- */
-/* MODIFICADO: Ajusta padding e line-height do botão de olho em telas maiores, removendo height e !important */
-@media (min-width: 992px) { /* Aplica-se a desktops e telas grandes */
-    .input-group-append #togglePassword {
-        /* height: calc(1.5em + 0.75rem + 2px) !important; */ /* Altura forçada REMOVIDA */
-        /* Ajusta padding vertical para tentar alinhar visualmente */
-        padding-top: 0.3rem; /* Valor ligeiramente menor que o padrão .375rem */
-        padding-bottom: 0.3rem; /* Valor ligeiramente menor que o padrão .375rem */
-        /* Mantém flexbox para centralizar o ícone */
-        display: flex;
-        align-items: center;
-        /* Garante line-height igual ao input */
-        line-height: 1.5;
-        box-sizing: border-box;
-    }
-    .input-group-append #togglePassword i {
-        font-size: 1rem; /* Mantém tamanho do ícone */
-        line-height: 1; /* Garante que line-height do ícone não interfira */
-        margin: 0;
-    }
-}

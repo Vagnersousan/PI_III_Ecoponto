@@ -9,7 +9,7 @@
             "type":"chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:\\Users\\vagne\\Documents\\Arquivos Diversos Particulares Vagner\\Projeto_Site PI III\\Site_PI_III_V2\\index.html",
+            "url": "file:///C:\\Users\\vagne\\Documents\\Arquivos Diversos Particulares Vagner\\Projeto_Site PI III\\Site_PI_III_V3 (Final)\\index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

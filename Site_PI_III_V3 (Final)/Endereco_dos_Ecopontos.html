@@ -259,82 +259,72 @@
         const ecopontos = [
             // Array de objetos, cada objeto representa um ecoponto
             // Propriedades: name (nome), address (endereço), cep, lat (latitude), lon (longitude), residuos (array de tipos aceitos)
-            { name: 'Ecoponto Nascer do Sol', address: 'Rua Nascer do Sol, nº 356', cep: '08485-020', lat: -23.59362654040959, lon: -46.41524527957642, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Setor G', address: 'Rua Alfonso Asturaro Setor G , nº 600', cep: '08473-591', lat: -23.585949969818813, lon: -46.39654892110602, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Jardim São Paulo', address: 'Rua Utaro Kanai ao lado do Posto de Saúde', cep: '08465-020', lat: -23.560511810553745, lon: -46.39802256395984, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Guaiaponto', address: 'Rua da Passagem Funda Nº 250', cep: '08411-010', lat: -23.544407029663414, lon: -46.41302847414787, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
-            { name: 'Ecoponto Lajeado', address: 'Rua Isabela Nº405 (Distrito Lajeado)', cep: '08440-520', lat: -23.530740981828004, lon: -46.40617423460332, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Padre Nildo do Amaral', address: 'Rua Padre Nildo do Amaral Júnior, n°900', cep: '08032-650', lat: -23.520526167328608, lon: -46.42894391926343, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Parque Guarani', address: 'Rua Manuel Alves da Rocha, nº 584', cep: '08235-620', lat: -23.520681092693493, lon: -46.46364399227397, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Oswaldo Valle Cordeiro', address: 'Av. Osvaldo Valle Cordeiro, nº 420', cep: '03584-000', lat: -23.556360435904377, lon: -46.49159519042663, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
-            { name: 'Ecoponto Cidade Lider', address: 'Rua Francesco Melzi n.º 200', cep: '03579-140', lat: -23.562270641612397, lon: -46.497045522743896, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Parque do Carmo', address: 'Rua Machado Nunes Nº 95', cep: '08275-310', lat: -23.578826815562206, lon: -46.486083390425584, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Corinthians', address: 'Rua Ana Perena Nº 155 (Distrito José Bonifácio)', cep: '08253-230', lat: -23.547543076531664, lon: -46.43678410576737, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
-            { name: 'Ecoponto Caldeirão', address: 'Rua Major Vitorino de Souza Rocha, n°90', cep: '08247-080', lat: -23.537527799974633, lon: -46.43180576343802, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Cipoaba', address: 'Rua Padre Luis de Siqueira', cep: '08310-190', lat: -23.62918739257104, lon: -46.46208180576364, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Iguatemi', address: 'Rua Francisco de Melo Palheta', cep: '08341-235', lat: -23.606084833792377, lon: -46.45178729227004, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Montalvania', address: 'Rua Montalvania nº 195', cep: '03930-095', lat: -23.57902825044991, lon: -46.49544664809583, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
-            { name: 'Ecoponto Lima Bonfante', address: 'Rua Capitão Mor Lázaro da Costa, nº 251', cep: '08390-260', lat: -23.628337579394262, lon: -46.446623621103996, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
-            { name: 'Ecoponto Inácio Monteiro', address: 'Rua Cachoeira Morena x Rua Cachoeira das Jangadas', cep: '08472-210', lat: -23.573278409260183, lon: -46.40147156343648, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] }, // Local correto da vírgula
-            // Entrada duplicada e linha de vírgula extra removidas abaixo
-            { name: 'AD Cupecê', address: 'Rua Anália Maria de Jesus, n° 131', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'CL Santo Dias', address: 'Travessa Rosifloras, nº 301', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'CL Olinda', address: 'Rua Nelson Brissac, s/nº x Av. Padre Adolfo Kolping', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'CL Beleza', address: 'Rua Campo Novo do Sul s/nº', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'CS Cidade Saudável', address: 'Rua Pitolomeu, s/nº', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Jardim Maria do Carmo', address: 'Rua Caminho do Engenho, nº 800', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Jardim Jaqueline', address: 'Rua Walter Brito Belleti', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Politécnica', address: 'Praça Nilton Vieira de Almeida', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Giovani Gronchi', address: 'Av. Giovani Gronchi, 3413 x Rua José Dias da Costa', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vila Madalena', address: 'Rua Girassol, nº 15 Esquina Rua Luís Murat', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Alto de Pinheiros', address: 'Praça Arcipreste Anselmo de Oliveira', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Tereza Cristina', address: 'Rua Tereza Cristina, nº 10 X Av. do Estado', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Santa Cruz', address: 'Rua Santa Cruz, nº 1452 (Baixos Viad. Santa Cruz)', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Imigrantes', address: 'Rua Opixe S/Nº x Rua Frederico Hoeme', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Alceu Maynard de', address: 'Av. Profº Alceu Maynard de Araújo, nº 330', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Água Espraiada', address: 'Baixo Viad. Austregésilo de Athayde X Av. Ver. José Diniz', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Glicério', address: 'Baixos do Viaduto Glicério', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Liberdade', address: 'Rua Jaceguai, Nº 67 x Av. Liberdade', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Armênia', address: 'Rua General Carmona, s/nº', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Barra Funda', address: 'Rua Sólon (Baixos Viaduto Engº Orlando Murgel)', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Cambuci', address: 'Av. do Estado x Av. D. Pedro I x Rua Ibiruba', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Bresser', address: 'Pça. Giuseppe Cesari, n° 54 (Baixos do Viad. Bresser)', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Tatuapé', address: 'Av. Salim Farah Maluf, n°179 (Central de Triagem)', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Moóca', address: 'Av. Pires do Rio X Rua Bresser (Baixo Viaduto Bresser)', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Belém', address: 'Baixos do Via. Guadalajara com Rua Artur Mota x Rua Herval', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Água Rasa', address: 'Av. Salim Farah Maluf, próx. nº 1.500', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Parque Peruche', address: 'Av. Engº Caetano Álvares, nº 3142', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vila Nova Cachoeirinha', address: 'Rua Felix Alves Pereira, nº 113', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Ecoponto Vila Santa Maria', address: 'Rua André Bolsena X Travessa Luiz Sá', cep: 'Não informado', lat: -23.5506, lon: -46.6334, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas (Coordenadas ajustadas levemente para evitar sobreposição)
-            { name: 'Casa Verde', address: 'Rua Zanzibar, nº 125', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Bandeirantes', address: 'Rua Itaiquara, nº 237 – Trav. Av. Itaberaba', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vila Sabrina', address: 'Av. dos Poetas, 931', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vila Maria', address: 'Rua Curuçá, 1.700', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Cônego José Salomon', address: 'Rua Cônego José Salomon, n° 861 - Vila Bonilha', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vigário Godói', address: 'Rua Vigário Godói, n° 480 - Vila Zat', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Recanto dos Humildes', address: 'Rua Sales Gomes, nº 415 - Recanto dos Humildes', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Jardim Santa Fé', address: 'Rua Salvador Albano X Rua Virginia Castiglione', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Astarte', address: 'Rua Astarte X Av. Aricanduva', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Viaduto Eng.º Alberto Badra', address: 'Av. Aricanduva, nº 200 - Sob Viad. Engº Alberto Badra', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Nascer do Sol', address: 'Rua Nascer do Sol, nº 356', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Jardim São Paulo', address: 'Rua Utaro Kanai ao lado do Posto de Saúde', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Guaiaponto', address: 'Rua da Passagem Funda s/nº', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Parque Guarani', address: 'Rua Manuel Alves da Rocha, nº 584', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Oswaldo Valle Cordeiro', address: 'Av. Osvaldo Valle Cordeiro, altura do nº 420', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Moreira', address: 'Rua João Batista de Godói, nº 1164', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Imperador', address: 'Av. Ribeirão Jacu, n° 201 (Baixos do Viad. Jacu Pêssego)', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Carlito Maia', address: 'Rua Domingos Fernandes Nobre, nº 109', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Pedro Nunes', address: 'Rua da Polka, nº 100', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Itaqueruna', address: 'Rua Domitila D\'Abril s/nº x Av. Nordestina', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Penha I', address: 'Rua Dr. Heládio, nº 104', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Tiquatira', address: 'Rua Amorim Diniz X Av. Gov. Carvalho Pinto s/nº', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Gamelinha', address: 'Rua Morfeu, nº 25 X Av. Edgar dos Santos – Jardim Marina', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vila Matilde', address: 'Rua Mateus de Siqueira x Praça Leonildes Ramos Saigo', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Cangaíba', address: 'Rua Dr. Luciano Nogueira X Frei Ricardo Pilar', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Franquinho', address: 'Rua Carlos Maria Stemberg X Av. Calim Eid', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Cipoaba', address: 'Rua Padre Luis de Siqueira X Av. Rodolfo Pirani', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Iguatemi', address: 'Rua Francisco de Melo Palheta x Rua Morro do Frade', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, // TODO: Verificar CEP e Coordenadas
-            { name: 'Vila Cardoso Franco', address: 'Rua dos Vorás, nº 25', cep: 'Não informado', lat: -23.5505, lon: -46.6333, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] } // TODO: Verificar CEP e Coordenadas
+            { name: 'Ecoponto Nascer do Sol', address: 'Rua Nascer do Sol, nº 356', cep: '08485-020', lat: -23.59355, lon: -46.41516, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Setor G', address: 'Rua Alfonso Asturaro Setor G , nº 733', cep: '08473-591', lat: -23.58603, lon: -46.39648, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Jardim São Paulo', address: 'Rua Utaro Kanai, 374  ao lado do Posto de Saúde', cep: '08465-020', lat: -23.56517, lon: -46.39834, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Guaiaponto', address: 'Rua da Passagem Funda Nº 250', cep: '08411-010', lat: -23.55503, lon: -46.41302, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
+            { name: 'Ecoponto Lajeado', address: 'Rua Isabela, 405  Distrito Lajeado', cep: '08440-520', lat: -23.53069, lon: -46.40609, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Padre Nildo do Amaral', address: 'Rua Padre Nildo do Amaral Júnior, n°900', cep: '08032-650', lat: -23.52051, lon: -46.42897, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Parque Guarani', address: 'Rua Manuel Alves da Rocha, nº 584', cep: '08235-620', lat: -23.52070, lon: -46.46356, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Oswaldo Valle Cordeiro', address: 'Av. Osvaldo Valle Cordeiro, nº 420', cep: '03584-000', lat: -23.55647, lon: -46.49203, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
+            { name: 'Ecoponto Cidade Lider', address: 'R. Charles Manguin, 1 - Jardim Marília', cep: '03579-150', lat: -23.56258, lon: -46.49714, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Parque do Carmo', address: 'Rua Machado Nunes Nº 95', cep: '08275-310', lat: -23.57877, lon: -46.48613, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Corinthians', address: 'Rua Ana Perena Nº 155 (Distrito José Bonifácio)', cep: '08253-230', lat: -23.54774, lon: -46.43714, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
+            { name: 'Ecoponto Caldeirão', address: 'Rua Major Vitorino de Souza Rocha, 148 - Vila Santa Terezinha', cep: '08247-080', lat: -23.53743, lon: -46.43176, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Cipoaba', address: 'Rua Padre Luis de Siqueira, 240', cep: '08310-190', lat: -23.62914, lon: -46.46207, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Iguatemi', address: 'Rua Francisco de Melo Palheta', cep: '08341-235', lat: -23.60612, lon: -46.45172, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Montalvania', address: 'Rua Montalvania nº 195', cep: '03930-095', lat: -23.57902, lon: -46.49544, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
+            { name: 'Ecoponto Lima Bonfante', address: 'Rua Capitão Mor Lázaro da Costa, nº 251', cep: '08390-260', lat: -23.62826, lon: -46.44658, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Inácio Monteiro', address: 'Rua Regresso Feliz, 1190', cep: '08472-210', lat: -23.57320, lon: -46.40145, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho', 'gesso'] },
+            { name: 'Ecoponto AD Cupecê', address: 'Rua Anália Maria de Jesus, n° 131', cep: '04385-090', lat: -23.66531, lon: -46.65434, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Santo Dias', address: 'Travessa Rosifloras, nº 301 -COHAB Instituto Adventista', cep: '05868-600', lat: -23.66370, lon: -46.77659, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Olinda', address: 'Rua Nelson Brissac, 1235 - Parque Regina', cep: '05778-180', lat: -23.63405, lon: -46.75801, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila das Belezas', address: 'Rua Campo Novo do Sul, 500', cep: '05729-100', lat: -23.63779, lon: -46.74157, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Cidade Saudável', address: 'Rua Pitolomeu, 869 - Vila Socorro', cep: '04762-040', lat: -23.66213, lon: -46.72230, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Jardim Maria do Carmo', address: 'Rua Caminho do Engenho, nº 800', cep: '05524-000', lat: -23.59536, lon: -46.74670, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Jardim Jaqueline', address: 'Rua Walter Brito Belleti - Vila Albano', cep: '05543-040', lat: -23.58909, lon: -46.75497, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Politécnica', address: 'Rua Paulino Baptista Conti,3', cep: '05382-140', lat: -23.57577, lon: -46.76462, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Giovani Gronchi', address: 'Av. Giovani Gronchi, 3413', cep: '05651-002', lat: -23.60985, lon: -46.72688, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila Madalena', address: 'Rua Girassol, nº 21 Esquina Rua Luís Murat', cep: '05433-000', lat: -23.55802, lon: -46.68727, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Alto de Pinheiros', address: 'Praça Arcipreste Anselmo de Oliveira', cep: '05463-080', lat: -23.55684, lon: -46.71051, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Tereza Cristina', address: 'Rua Tereza Cristina, nº 10', cep: '01552-020', lat: -23.56891, lon: -46.60846, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Santa Cruz', address: 'Rua Santa Cruz, nº 1452 (Baixos Viad. Santa Cruz)', cep: '04122-001', lat: -23.59944, lon: -46.62334, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Imigrantes', address: 'Rua Opixé, 93 - Vila Guarani', cep: '04312-080', lat: -23.63210, lon: -46.63049, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Alceu Maynard de Araújo', address: 'Av. Profº Alceu Maynard de Araújo, nº 330', cep: '084728-110', lat: -23.63586, lon: -46.71377, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Glicério', address: 'Baixos do Viaduto Glicério', cep: '01517-100', lat: -23.55398, lon: -46.62636, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Liberdade', address: 'Rua Jaceguai, Nº 67 - Liberdade', cep: '01315-010', lat: -23.55640, lon: -46.63724, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Armênia', address: 'Rua General Carmona, s/nº', cep: '01102-030', lat: -23.52100, lon: -46.62761, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Barra Funda', address: 'Rua Cônego Vicente Miguel Marino, 22 - Barra Funda', cep: '01135-020', lat: -23.52693, lon: -46.64852, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Cambuci', address: 'Av. D. Pedro I, 38 - Vila Monumento', cep: '01515-000', lat: -23.56457, lon: -46.61133, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Bresser', address: 'Pça. Giuseppe Cesari, n° 54 (Baixos do Viad. Bresser)', cep: '03053-020', lat: -23.54350, lon: -46.60620, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Tatuapé', address: 'Av. Salim Farah Maluf, n°179 (Central de Triagem)', cep: '03304-090', lat: -23.52967, lon: -46.58302, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Moóca', address: 'Av. Pires do Rio, 600', cep: '03160-010', lat: -23.54214, lon: -46.60385, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Belém', address: 'Baixos do Via. Guadalajara com Rua Artur Mota x Rua Herval', cep: '03062-030', lat: -23.54295, lon: -46.59370, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Água Rasa', address: 'Av. Salim Farah Maluf, 1494', cep: '03304-090', lat: -23.54352, lon: -46.58057, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Parque Peruche', address: 'Av. Engº Caetano Álvares, nº 3142', cep: '02535-008', lat: -23.49142, lon: -46.65573, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }, 
+            { name: 'Ecoponto Vila Nova Cachoeirinha', address: 'Rua Felix Alves Pereira, nº 113', cep: '02882-030', lat: -23.47195, lon: -46.66979, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila Santa Maria', address: 'Rua André Bolsena X Travessa Luiz Sá', cep: '02560-220', lat: -23.49378, lon: -46.67159, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Bandeirantes', address: 'Rua Itaiquara, nº 237 – Trav. Av. Itaberaba', cep: '02802-070', lat: -23.48607, lon: -46.69524, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila Sabrina', address: 'Av. dos Poetas, 931', cep: '02161-160', lat: -23.48617, lon: -46.56567, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila Maria', address: 'Rua Curuçá, 1.700', cep: '02120-005', lat: -23.51945, lon: -46.58085, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Cônego José Salomon', address: 'Rua Cônego José Salomon, n° 861 - Vila Portugal', cep: '02918-170', lat: -23.49197, lon: -46.72192, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vigário Godói', address: 'Rua Vigário Godói, n° 480 - Vila Zat', cep: '02976-080', lat: -23.47742, lon: -46.71822, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Recanto dos Humildes', address: 'Rua Sales Gomes, nº 415 - Recanto dos Humildes', cep: '05208-110', lat: -23.40913, lon: -46.75072, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Jardim Santa Fé', address: 'Rua Salvador Albano X Rua Virginia Castiglione', cep: '05271-090', lat: -23.43151, lon: -46.79192, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Astarte', address: 'Rua Astarte, 500  - Vila Carrão', cep: '03447-140', lat: -23.54982, lon: -46.52506, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Viaduto Eng.º Alberto Badra', address: 'Av. Aricanduva, nº 200 - Sob Viad. Engº Alberto Badra', cep: '03501-010', lat: -23.53696, lon: -46.54736, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Moreira', address: 'Rua João Batista de Godói, nº 1164', cep: '08111-390', lat: -23.49731, lon: -46.37085, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Imperador', address: 'Av. Ribeirão Jacu, n° 201 (Baixos do Viad. Jacu Pêssego)', cep: '08050-420', lat: -23.51379, lon: -46.45669, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Carlito Maia', address: 'Rua Domingos Fernandes Nobre, nº 109', cep: '08190-390', lat: -23.48979, lon: -46.39356, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Pedro Nunes', address: 'Rua da Polka, nº 100', cep: '08061-540', lat: -23.50635, lon: -46.46224, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Itaqueruna', address: 'Rua Domitila D Abril s/nº  Av. Nordestina', cep: '08042-550', lat: -23.50971, lon: -46.43279, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Penha I', address: 'Rua Dr. Heládio, nº 104', cep: '03650-020', lat: -23.53112, lon: -46.52540, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Tiquatira', address: 'Rua Amorim Diniz X Av. Gov. Carvalho Pinto s/nº', cep: '03730-040', lat: -23.51319, lon: -46.54374, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Gamelinha', address: 'Rua Morfeu, nº 25 - Vila Nhocuné', cep: '03563-295', lat: -23.55060, lon: -46.49491, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila Matilde', address: 'Rua Mateus de Siqueira x Praça Leonildes Ramos Saigo', cep: '03556-020', lat: -23.53910, lon: -46.50505, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Cangaíba', address: 'Rua Huho Wolf,300 - Cangaíba', cep: '03720-130', lat: -23.50360, lon: -46.52758, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Franquinho', address: 'Rua Praia de Mucuripe, 177 - Artur Alvim', cep: '03687-100', lat: -23.53212, lon: -46.48766, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] },
+            { name: 'Ecoponto Vila Cardoso Franco', address: 'Rua dos Vorás, nº 25', cep: '03978-310', lat: -23.62309, lon: -46.50919, residuos: ['arvore', 'plastico', 'vidro', 'metal', 'moveis', 'entulho'] }
         ];
 
         // Padroniza os nomes para começar com "Ecoponto " se ainda não começarem
@@ -344,26 +334,7 @@
             }
         });
 
-        // Ordena o array de ecopontos em ordem alfabética pelo nome
-        ecopontos.sort((a, b) => a.name.localeCompare(b.name));
-
-        // Ajusta coordenadas levemente para evitar sobreposição exata de marcadores
-        const coordsMap = {};
-        const offsetIncrement = 0.00002; // Pequeno deslocamento para evitar sobreposição visual
-        ecopontos.forEach(ecoponto => {
-            const coordKey = `${ecoponto.lat},${ecoponto.lon}`;
-            if (coordsMap[coordKey]) {
-                // Se a coordenada já existe, aplica um pequeno deslocamento
-                ecoponto.lat += coordsMap[coordKey] * offsetIncrement;
-                ecoponto.lon += coordsMap[coordKey] * offsetIncrement;
-                coordsMap[coordKey]++; // Incrementa o contador para o próximo deslocamento
-            } else {
-                coordsMap[coordKey] = 1; // Marca a coordenada como vista pela primeira vez
-            }
-        });
-
-
-
+        
            // --- Inicialização do Mapa Leaflet --- 
         // Cria o mapa na div #map, define a visão inicial (centro e zoom)
         const mymap = L.map('map', {
@@ -431,10 +402,13 @@
         }
 
         /**
-         * Adiciona marcadores e itens de lista para os ecopontos fornecidos.
+         * Adiciona marcadores e itens de lista para os ecopontos fornecidos, ordenados alfabeticamente.
          * @param {array} ecopontosParaMostrar - Array de objetos de ecopontos a serem exibidos.
          */
         function adicionarEcopontos(ecopontosParaMostrar) {
+            // Ordena a lista alfabeticamente pelo nome antes de exibir
+            ecopontosParaMostrar.sort((a, b) => a.name.localeCompare(b.name));
+
             // Limpa marcadores e lista existentes
             markerGroup.clearLayers();
             listaResultados.innerHTML = ''; // Limpa a lista HTML
@@ -471,7 +445,7 @@
 
             // Se nenhum resíduo foi selecionado (valor vazio), mostra todos
             if (residuoSelecionado === "") {
-                ecopontosFiltrados = ecopontos;
+                ecopontosFiltrados = [...ecopontos]; // Cria uma cópia para evitar modificar o original ao ordenar
                 // Reseta o cabeçalho da lista para o padrão
                 document.getElementById('lista-ecopontos').querySelector('h4').textContent = 'Ecopontos Encontrados:';
             } else {
