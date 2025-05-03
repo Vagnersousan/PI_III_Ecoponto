@@ -1,153 +1,230 @@
 <?php
 /**
- * Script PHP para processar o cadastro de novos usuários.
+ * Script PHP para processar o cadastro de novos usuários com segurança aprimorada.
  * 
- * Este script recebe os dados enviados através do método POST a partir do formulário
- * localizado em 'cadastro.html'. Ele realiza uma validação mínima (verificando se
- * o método da requisição é POST) e, em seguida, tenta inserir as informações
- * do novo usuário na tabela 'cadastro' do banco de dados.
- * 
- * Inclui tratamento básico de erros e feedback para o usuário através de JavaScript.
+ * Este script recebe os dados enviados via POST do formulário 'cadastro.html'.
+ * Implementa validações robustas, sanitização de entradas, proteção contra CSRF,
+ * hashing seguro de senhas e tratamento de erros aprimorado para aumentar a segurança.
  * 
  * @package    SitePIIII
- * @subpackage Cadastro
+ * @subpackage CadastroSeguro
  */
 
+// --- Inicialização da Sessão --- 
+// Essencial para armazenar tokens CSRF e mensagens de feedback (flash messages).
+// Deve ser chamado antes de qualquer saída para o navegador.
+if (session_status() == PHP_SESSION_NONE) {
+    // Configurações de segurança da sessão (recomendado)
+    session_set_cookie_params([
+        'lifetime' => 3600, // Tempo de vida do cookie da sessão (1 hora)
+        'path' => '/', // Caminho onde o cookie estará disponível
+        'domain' => $_SERVER['HTTP_HOST'], // Domínio atual
+        'secure' => isset($_SERVER['HTTPS']), // True se HTTPS estiver ativo
+        'httponly' => true, // Impede acesso ao cookie via JavaScript (protege contra XSS)
+        'samesite' => 'Lax' // Proteção adicional contra CSRF
+    ]);
+    session_start();
+}
+
 // --- Configuração de Exibição de Erros --- 
-// É altamente recomendável desativar a exibição de erros em ambiente de produção
-// por motivos de segurança. Durante o desenvolvimento, habilitar a exibição ajuda na depuração.
-error_reporting(E_ALL); // Reporta todos os tipos de erros PHP.
-ini_set("display_errors", 1); // Configura o PHP para exibir os erros na saída (1 = Ativado, 0 = Desativado).
+// Em produção, é recomendado desativar a exibição de erros e logá-los em ficheiro.
+error_reporting(E_ALL);
+ini_set("display_errors", 0); // 0 = Desativado em produção
+ini_set("log_errors", 1); // 1 = Ativar log de erros
+// ini_set("error_log", "/caminho/para/seu/php-error.log"); // Especificar ficheiro de log
 
 // --- Inclusão de Arquivos Necessários --- 
-// Inclui o arquivo 'db.php', que presume-se conter a lógica para estabelecer
-// a conexão com o banco de dados (provavelmente usando PDO).
-// 'require_once' é usado para garantir que o arquivo seja incluído apenas uma vez.
-// Se o arquivo não for encontrado, um erro fatal será gerado, interrompendo o script.
-require_once "db.php";
+require_once "db.php"; // Contém a função getConnection() para conexão PDO.
 
-// --- Verificação do Método da Requisição HTTP --- 
-// Verifica se a página foi acessada através de uma requisição POST.
-// Formulários de cadastro devem enviar dados via POST por segurança e capacidade.
+// --- Funções Auxiliares de Segurança --- 
+
+/**
+ * Gera um token CSRF e armazena-o na sessão.
+ * @return string O token CSRF gerado.
+ */
+function gerarTokenCSRF() {
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // Gera um token aleatório seguro
+    }
+    return $_SESSION['csrf_token'];
+}
+
+/**
+ * Valida o token CSRF enviado com o armazenado na sessão.
+ * @param string $tokenEnviado O token recebido do formulário.
+ * @return bool True se o token for válido, False caso contrário.
+ */
+function validarTokenCSRF($tokenEnviado) {
+    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $tokenEnviado);
+}
+
+/**
+ * Sanitiza uma string para prevenir XSS.
+ * @param string|null $input A string de entrada.
+ * @return string A string sanitizada.
+ */
+function sanitizarString($input) {
+    return $input ? htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8') : '';
+}
+
+/**
+ * Define uma mensagem flash (feedback para o usuário) na sessão.
+ * @param string $tipo 'success', 'error', 'warning', 'info'
+ * @param string $mensagem A mensagem a ser exibida.
+ */
+function setFlashMessage($tipo, $mensagem) {
+    $_SESSION['flash_message'] = ['type' => $tipo, 'message' => $mensagem];
+}
+
+/**
+ * Redireciona o usuário para uma URL e termina o script.
+ * @param string $url A URL de destino.
+ */
+function redirecionar($url) {
+    header("Location: " . $url);
+    exit;
+}
+
+// --- Verificação do Método da Requisição e Token CSRF --- 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // --- Coleta dos Dados Enviados pelo Formulário --- 
-    // Os dados são acessados através da variável superglobal $_POST, que contém
-    // um array associativo com os dados enviados.
-    // 
-    // IMPORTANTE: Nenhuma validação ou sanitização significativa está sendo aplicada aqui.
-    // Isso representa um RISCO DE SEGURANÇA considerável (ex: SQL Injection, Cross-Site Scripting - XSS).
-    // Em um ambiente real, é ESSENCIAL validar (formato, tipo, obrigatoriedade) e
-    // sanitizar (limpar dados potencialmente maliciosos) CADA um dos campos recebidos.
-    $nome = $_POST["inputNome"];
-    $endereco = $_POST["inputEndereco"];
-    $complemento = $_POST["inputComplemento"]; // Campo opcional, pode estar vazio.
-    $cep = $_POST["inputCEP"];
-    $bairro = $_POST["inputBairro"]; // Campo opcional, pode estar vazio.
-    $email = $_POST["inputEmail"];
-    $senha = $_POST["inputSenha"]; // A senha está sendo capturada em texto plano.
+    // 1. Validação do Token CSRF
+    if (!isset($_POST['csrf_token']) || !validarTokenCSRF($_POST['csrf_token'])) {
+        // Token inválido ou ausente - possível ataque CSRF
+        error_log("Falha na validação do token CSRF em cadastrar_usuario.php");
+        setFlashMessage('error', 'Erro de segurança ao processar o formulário. Tente novamente.');
+        redirecionar("cadastro.html");
+    }
+    // Regenera o token após o uso para maior segurança
+    unset($_SESSION['csrf_token']);
+    gerarTokenCSRF(); // Gera um novo para o próximo request
 
-    // --- Validação e Sanitização (Exemplos Mínimos - DEVEM SER EXPANDIDOS) ---
-    // Esta seção demonstra exemplos básicos de validação. Uma aplicação real
-    // necessitaria de validações muito mais robustas.
-    
-    // Exemplo 1: Verificar se campos obrigatórios estão preenchidos.
-    if (empty($nome) || empty($endereco) || empty($cep) || empty($email) || empty($senha)) {
-        // Se algum campo obrigatório estiver vazio, exibe um alerta JavaScript e interrompe o script.
-        // 'die()' ou 'exit()' interrompem a execução do script.
-        // 'window.history.back()' tenta retornar o usuário à página anterior (o formulário).
-        die("<script>alert('Erro: Todos os campos obrigatórios (Nome, Endereço, CEP, E-mail, Senha) devem ser preenchidos.'); window.history.back();</script>");
+    // --- Coleta e Sanitização dos Dados --- 
+    // Aplica sanitização básica a todos os campos para prevenir XSS.
+    $nome = sanitizarString($_POST["inputNome"]);
+    $endereco = sanitizarString($_POST["inputEndereco"]);
+    $complemento = sanitizarString($_POST["inputComplemento"]); // Opcional
+    $cep = sanitizarString($_POST["inputCEP"]);
+    $bairro = sanitizarString($_POST["inputBairro"]); // Opcional
+    $email = isset($_POST["inputEmail"]) ? trim($_POST["inputEmail"]) : ''; // Email precisa de validação específica
+    $senha = isset($_POST["inputSenha"]) ? $_POST["inputSenha"] : ''; // Senha não é sanitizada com htmlspecialchars, mas validada
+
+    // --- Validações Robustas --- 
+    $erros = []; // Array para armazenar mensagens de erro
+
+    // 2. Validação de Campos Obrigatórios
+    if (empty($nome)) { $erros[] = "O campo Nome é obrigatório."; }
+    if (empty($endereco)) { $erros[] = "O campo Endereço é obrigatório."; }
+    if (empty($cep)) { $erros[] = "O campo CEP é obrigatório."; }
+    if (empty($email)) { $erros[] = "O campo E-mail é obrigatório."; }
+    if (empty($senha)) { $erros[] = "O campo Senha é obrigatório."; }
+
+    // 3. Validação de Formato do E-mail
+    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $erros[] = "O formato do e-mail fornecido é inválido.";
     }
-    
-    // Exemplo 2: Validar o formato do e-mail.
-    // 'filter_var' com 'FILTER_VALIDATE_EMAIL' é uma forma padrão de verificar a sintaxe do e-mail.
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("<script>alert('Erro: O formato do e-mail fornecido é inválido.'); window.history.back();</script>");
+
+    // 4. Validação do Formato do CEP (Exemplo: 00000-000)
+    if (!empty($cep) && !preg_match('/^\d{5}-\d{3}$/', $cep)) {
+        $erros[] = "O formato do CEP deve ser 00000-000.";
     }
-    
-    // Exemplo 3: Sanitizar o nome (remover tags HTML e caracteres potencialmente perigosos).
-    // 'FILTER_SANITIZE_STRING' está obsoleto a partir do PHP 8.0. Use 'htmlspecialchars' ou outras abordagens.
-    // $nome = filter_var($nome, FILTER_SANITIZE_STRING); // Obsoleto
-    $nome = htmlspecialchars($nome, ENT_QUOTES, 'UTF-8'); // Alternativa mais segura
-    
-    // TODO: Aplicar validação e sanitização adequadas a TODOS os outros campos ($endereco, $cep, $bairro, etc.).
-    // Considerar validação de formato do CEP, limites de tamanho para os campos, etc.
+
+    // 5. Validação de Comprimento dos Campos (Exemplos)
+    if (mb_strlen($nome) > 100) { $erros[] = "O Nome não pode exceder 100 caracteres."; }
+    if (mb_strlen($endereco) > 255) { $erros[] = "O Endereço não pode exceder 255 caracteres."; }
+    // Adicionar validações de comprimento para outros campos se necessário...
+
+    // 6. Validação de Complexidade da Senha (Exemplo: Mínimo 8 caracteres)
+    if (mb_strlen($senha) < 8) {
+        $erros[] = "A senha deve ter no mínimo 8 caracteres.";
+    }
+    // Poderia adicionar mais regras: exigir letras maiúsculas, minúsculas, números, símbolos.
+    // Exemplo mais complexo (pelo menos 1 número, 1 letra maiúscula, 1 minúscula):
+    /*
+    if (!preg_match('/[A-Z]/', $senha)) { $erros[] = "A senha deve conter pelo menos uma letra maiúscula."; }
+    if (!preg_match('/[a-z]/', $senha)) { $erros[] = "A senha deve conter pelo menos uma letra minúscula."; }
+    if (!preg_match('/\d/', $senha)) { $erros[] = "A senha deve conter pelo menos um número."; }
+    */
+
+    // --- Processamento Após Validação --- 
+    if (!empty($erros)) {
+        // Se houver erros de validação, armazena-os na sessão e redireciona de volta para o formulário.
+        setFlashMessage('error', implode('<br>', $erros)); // Junta os erros numa única mensagem
+        // Opcional: Armazenar os dados submetidos (exceto senha) para repopular o formulário
+        $_SESSION['form_data'] = $_POST;
+        unset($_SESSION['form_data']['inputSenha']); // Nunca armazenar senha
+        redirecionar("cadastro.html");
+    }
 
     // --- Segurança da Senha (Hashing) --- 
-    // ARMAZENAR SENHAS EM TEXTO PLANO É UM RISCO GRAVE DE SEGURANÇA!
-    // Utiliza a função 'password_hash()' do PHP para criar um hash seguro da senha.
-    // 'PASSWORD_DEFAULT' seleciona automaticamente o algoritmo de hash mais forte disponível no servidor (atualmente bcrypt).
-    // O hash resultante inclui o algoritmo usado e um salt gerado aleatoriamente, tornando-o seguro contra ataques comuns.
+    // Usa password_hash() com o algoritmo padrão (atualmente bcrypt).
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-
-    // --- Conexão com o Banco de Dados --- 
-    // Chama a função 'getConnection()' (definida em 'db.php') para obter um objeto de conexão PDO.
-    $conn = getConnection();
-
-    // Verifica se a conexão foi estabelecida com sucesso.
-    // A função getConnection() idealmente já trataria falhas de conexão (ex: logando o erro e/ou interrompendo).
-    if (!$conn) {
-        // Adiciona uma verificação extra por segurança.
-        error_log("Falha crítica ao obter conexão do banco de dados em cadastrar_usuario.php");
-        die("<script>alert('Erro crítico no sistema. Não foi possível conectar ao banco de dados. Tente novamente mais tarde.'); window.history.back();</script>");
+    if ($senhaHash === false) {
+        // Falha ao gerar o hash (raro, mas possível)
+        error_log("Falha ao gerar hash de senha em cadastrar_usuario.php");
+        setFlashMessage('error', 'Ocorreu um erro crítico ao processar a senha. Tente novamente.');
+        redirecionar("cadastro.html");
     }
 
-    // --- Preparação e Execução da Consulta SQL (INSERT) --- 
-    // Define a instrução SQL para inserir um novo registro na tabela 'cadastro'.
-    // Utiliza 'placeholders' (?) para os valores. Isso é essencial para usar Prepared Statements,
-    // que previnem ataques de Injeção de SQL.
+    // --- Conexão com o Banco de Dados --- 
+    $conn = getConnection();
+    if (!$conn) {
+        error_log("Falha crítica ao obter conexão do banco de dados em cadastrar_usuario.php");
+        setFlashMessage('error', 'Erro crítico no sistema (DB Connection). Tente novamente mais tarde.');
+        redirecionar("cadastro.html");
+    }
+
+    // --- Preparação e Execução da Consulta SQL (INSERT com Prepared Statements) --- 
     $sql = "INSERT INTO cadastro (nome, endereco, complemento, cep, bairro, email, senha) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+            VALUES (:nome, :endereco, :complemento, :cep, :bairro, :email, :senha)";
 
     try {
-        // Prepara a instrução SQL para execução. O PDO verifica a sintaxe da query.
         $stmt = $conn->prepare($sql);
 
-        // Executa a instrução preparada, passando os valores reais para os placeholders.
-        // Os valores são passados como um array na ordem correspondente aos placeholders (?).
-        // IMPORTANTE: Passa o '$senhaHash' em vez da senha original '$senha'.
-        $stmt->execute([$nome, $endereco, $complemento, $cep, $bairro, $email, $senhaHash]);
+        // Associa os valores aos placeholders nomeados (:placeholder)
+        // Isso melhora a legibilidade e segurança.
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':endereco', $endereco);
+        $stmt->bindParam(':complemento', $complemento);
+        $stmt->bindParam(':cep', $cep);
+        $stmt->bindParam(':bairro', $bairro);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senhaHash);
 
-        // --- Feedback de Sucesso ao Usuário --- 
-        // Se a execução foi bem-sucedida (nenhuma exceção foi lançada).
-        // Exibe um alerta JavaScript informando o sucesso e redireciona o usuário para a página inicial ('index.html').
-        // Uma abordagem melhor seria redirecionar primeiro e mostrar a mensagem na página de destino
-        // (usando variáveis de sessão, por exemplo - "flash messages").
-        echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href = 'index.html';</script>";
-        exit; // Termina a execução do script após o redirecionamento.
+        $stmt->execute();
+
+        // --- Feedback de Sucesso --- 
+        setFlashMessage('success', 'Cadastro realizado com sucesso! Bem-vindo(a)!');
+        // Limpa dados do formulário da sessão se existirem
+        unset($_SESSION['form_data']); 
+        redirecionar("index.html"); // Redireciona para a página inicial ou de login
 
     } catch (PDOException $e) {
-        // --- Tratamento de Erros na Execução da Query --- 
-        // Captura exceções do tipo PDOException, que indicam erros relacionados ao banco de dados.
-        
-        // Verifica o código de erro SQLSTATE. '23000' geralmente indica uma violação de restrição de integridade,
-        // como uma chave única duplicada (por exemplo, tentar cadastrar um e-mail que já existe).
-        // O código exato pode variar ligeiramente dependendo do SGBD.
-        if ($e->getCode() == 23000) { 
-             // Informa ao usuário que o e-mail já está em uso.
-             echo "<script>alert('Erro: Este e-mail já está cadastrado em nosso sistema. Por favor, utilize outro e-mail ou tente fazer login.'); window.history.back();</script>";
+        // --- Tratamento de Erros PDO --- 
+        // Verifica código de erro para duplicação de chave (ex: email já existe)
+        if ($e->getCode() == 23000 || $e->getCode() == '23000') { // Código pode ser string ou int
+             setFlashMessage('error', 'Erro: Este e-mail já está cadastrado. Utilize outro e-mail ou tente fazer login.');
+             // Opcional: Armazenar dados para repopular
+             $_SESSION['form_data'] = $_POST;
+             unset($_SESSION['form_data']['inputSenha']);
+             redirecionar("cadastro.html");
         } else {
-            // Para outros tipos de erros de banco de dados, loga a mensagem de erro detalhada
-            // para análise posterior pelo administrador do sistema.
-            error_log("Erro PDO ao executar INSERT em cadastrar_usuario.php: " . $e->getMessage()); 
-            
-            // Exibe uma mensagem genérica de erro para o usuário, sem expor detalhes técnicos.
-            echo "<script>alert('Ocorreu um erro inesperado ao processar seu cadastro. Por favor, tente novamente mais tarde.'); window.history.back();</script>";
-            // Em desenvolvimento, pode ser útil descomentar a linha abaixo para ver o erro exato:
-            // echo "Erro no banco de dados: " . $e->getMessage(); 
+            // Outros erros de banco de dados
+            error_log("Erro PDO [cadastrar_usuario.php]: " . $e->getMessage() . " | SQLState: " . $e->getCode()); 
+            setFlashMessage('error', 'Ocorreu um erro inesperado ao processar seu cadastro. Tente novamente mais tarde.');
+            // Opcional: Armazenar dados para repopular
+             $_SESSION['form_data'] = $_POST;
+             unset($_SESSION['form_data']['inputSenha']);
+            redirecionar("cadastro.html");
         }
-        exit; // Termina a execução do script após tratar o erro.
     }
 
 } else {
-    // --- Tratamento para Método de Requisição Inválido --- 
-    // Se a página foi acessada por um método diferente de POST (ex: GET diretamente pela URL).
-    // Redireciona o usuário de volta para a página do formulário de cadastro.
-    // Isso evita que o script tente processar dados inexistentes.
-    // echo "Método de requisição inválido."; // Mensagem alternativa (menos usual)
-    header("Location: cadastro.html"); // Envia um cabeçalho HTTP para redirecionar o navegador.
-    exit; // Termina a execução do script após o redirecionamento.
+    // --- Método de Requisição Inválido --- 
+    // Se não for POST, redireciona para o formulário.
+    // Gera um token CSRF para o formulário que será carregado.
+    gerarTokenCSRF(); 
+    redirecionar("cadastro.html");
 }
 
 ?>
-

@@ -49,7 +49,6 @@ function getConnection() {
         error_log("Erro de conexão PDO: " . $e->getMessage()); // Exemplo de log de erro
         die("Erro crítico: Não foi possível conectar ao banco de dados. Por favor, tente novamente mais tarde."); // Interrompe a execução com mensagem genérica
         
-        // return null; // Alternativa: retornar null para indicar falha
     }
 }
 ?>

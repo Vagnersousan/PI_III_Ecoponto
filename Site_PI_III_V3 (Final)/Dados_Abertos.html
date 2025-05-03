@@ -21,16 +21,12 @@
     <!-- O atributo 'integrity' garante que o arquivo não foi adulterado e 'crossorigin' permite o carregamento de fontes externas -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="graficos.css">
-    <!-- Link para a folha de estilo personalizada principal (style.css), onde as modificações de design e acessibilidade foram aplicadas -->
-    <!-- <link rel="stylesheet" href="graficos.css"> -->
-    <!-- CSS original específico para gráficos (Comentado, pois os estilos necessários foram integrados ou ajustados em style.css) -->
-
     <!-- Inclusão da biblioteca Chart.js para renderização dos gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Carrega a biblioteca Chart.js de um CDN -->
 
     <!-- Estilos CSS embutidos (inline) específicos para esta página -->
-    <!-- Estes estilos foram mantidos para garantir a consistência visual dos contêineres dos gráficos, mas idealmente poderiam ser movidos para style.css -->
+    <!-- Estes estilos foram mantidos para garantir a consistência visual dos contêineres dos gráficos. -->
     <style>
         /* Estilos para os contêineres que envolvem cada gráfico */
         .chart-container {
@@ -198,8 +194,8 @@
                 <div class="chart-container">
                     <h3>Destinação dos Resíduos Sólidos Urbanos na América Latina e no Caribe (2021)</h3>
                     <div class="canvas-wrapper">
-                        <canvas id="graficoDestinoALC" role="img" aria-label="Gráfico de pizza mostrando a destinação dos resíduos sólidos urbanos na América Latina e Caribe em 2021."></canvas>
-                        <!-- Canvas para o gráfico de pizza -->
+                        <canvas id="graficoDestinoALC" role="img" aria-label="Gráfico de rosca mostrando a destinação dos resíduos sólidos urbanos na América Latina e Caribe em 2021."></canvas>
+                        <!-- Canvas para o gráfico de rosca -->
                     </div>
                     <p class="chart-explanation">Observe que, a grande porcentagem de lixo com <strong>destinação inadequada</strong> (vermelho). A reciclagem e a compostagem (amarelo), ainda representam uma pequena fração. Os ecopontos de SP, são essenciais para aumentar essa fração amarela!</p>
                     <!-- Explicação específica para este gráfico -->
@@ -209,7 +205,7 @@
                 <div class="chart-container">
                     <h3>Taxa de Coleta de Resíduos Sólidos Urbanos (%)</h3>
                     <div class="canvas-wrapper">
-                        <canvas id="graficoTaxaColeta" role="img" aria-label="Gráfico de linha mostrando a evolução da taxa de coleta de resíduos sólidos urbanos no Brasil de 2022 a 2023."></canvas>
+                        <canvas id="graficoTaxaColeta" role="img" aria-label="Gráfico de barras mostrando a evolução da taxa de coleta de resíduos sólidos urbanos no Brasil de 2022 a 2023."></canvas>
                         <!-- Canvas para o gráfico de linha -->
                     </div>
                     <p class="chart-explanation">Embora a taxa de coleta possa ser alta, é fundamental garantir que o lixo coletado tenha o destino correto. Por esse motivo, é muito importante usar os Ecopontos para o descarte adequado de resíduos!</p>
@@ -239,7 +235,6 @@
     <!-- Fim do conteúdo principal -->
 
     <!-- Rodapé da página -->
-    <!-- MODIFICADO (em style.css): Cor de fundo alterada para #000000 (preto forte) -->
     <footer>
         &copy; 2025 Cadê o Ecoponto.
         <!-- Informação de copyright. O ano pode ser atualizado dinamicamente se necessário -->
@@ -247,7 +242,6 @@
     <!-- Fim do rodapé -->
 
     <!-- Scripts JavaScript -->
-    <!-- É boa prática colocar scripts no final do body para não bloquear a renderização da página -->
 
     <!-- jQuery (biblioteca JavaScript necessária para o funcionamento do Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -264,16 +258,6 @@
     <script src="script.js"></script>
     <!-- É crucial garantir que este script contenha a lógica original e funcional para os gráficos -->
 
-    <!-- Script inline original (comentado por não ser mais necessário ou aplicável) -->
-    <!-- <script>
-        // O código original aqui tentava adicionar um listener a um botão que não existe mais no header modificado.
-        // const inscreverBtn = document.getElementById("inscreverBtn");
-        // if (inscreverBtn) {
-        //     // Lógica de redirecionamento ou outra ação que não se aplica mais aqui.
-        //     // inscreverBtn.addEventListener("click", function () {
-        //     // });
-        // }
-    </script> -->
 
 </body>
 <!-- Fim do corpo da página -->

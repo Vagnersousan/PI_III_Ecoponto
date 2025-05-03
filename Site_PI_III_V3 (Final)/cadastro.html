@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <!-- Define a codificação de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- Configura a viewport para responsividade, shrink-to-fit=no evita encolhimento em alguns navegadores iOS -->
+    <!-- Configura a viewport para responsividade -->
     <title>Cadastro - Cadê o Ecoponto</title>
     <!-- Título descritivo da página -->
     <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
@@ -19,32 +19,35 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- CSS do Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Ícones do Bootstrap (usado para o olho da senha) -->
+    <!-- Ícones do Bootstrap -->
     <link rel="stylesheet" href="style.css">
-    <!-- CSS personalizado principal (contém as melhorias de acessibilidade e design) -->
+    <!-- CSS personalizado principal (PODE CONTER A DEFINIÇÃO DA COR VERDE PARA .btn-success) -->
 
     <!-- Estilos CSS embutidos específicos para esta página -->
     <style>
         /* Estilos específicos para o formulário de cadastro */
         #formularioInscricao {
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente para destacar o formulário */
+            background-color: rgba(255, 255, 255, 0.63); /* Fundo branco semi-transparente (AJUSTADO pelo utilizador) */
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 1rem;
         }
-
-        /* Remove a imagem de fundo específica que estava aqui, pois o style.css já tem a marca d'água */
-        /* A cor de fundo do body já é definida em style.css */
-
-        /* O estilo .form-control já está definido de forma mais acessível em style.css */
-
+        
         /* Estilo para o grupo do campo de senha */
         .input-group {
-            position: relative; /* Necessário para o posicionamento do botão de toggle */
+            position: relative;
         }
 
-        /* O estilo #togglePassword está definido em style.css */
+        /* Estilo para as mensagens de feedback (flash messages) */
+        #flashMessageContainer .alert {
+            margin-top: 1rem;
+        }
+
+        /* Estilo para o texto informativo da senha */
+        #senhaInfo {
+            margin-top: 0.25rem; /* Pequeno espaço acima */
+        }
 
     </style>
 </head>
@@ -67,16 +70,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+                        <!-- Links de navegação -->
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte
-                                correto</a>
+                            <a class="nav-link" href="a_importancia_do_descarte_correto.html">A importância do descarte correto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no
-                                Ecoponto</a>
+                            <a class="nav-link" href="tipos_de_Residuos_aceitos_no_Ecoponto.html">Resíduos aceitos no Ecoponto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Endereco_dos_Ecopontos.html">Endereço dos Ecopontos</a>
@@ -84,9 +86,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Dados_Abertos.html">Dados Abertos</a>
                         </li>
+                        <!-- ADICIONE AQUI O LINK PARA ESTA PÁGINA DE CADASTRO -->
+                        <!-- Exemplo: -->
+                        <!-- 
+                        <li class="nav-item active"> 
+                            <a class="nav-link" href="cadastro.html">Cadastro <span class="sr-only">(página atual)</span></a>
+                        </li> 
+                        -->
                     </ul>
-                    <!-- Botão Cadastre-se não faz sentido nesta página, removido do header -->
-                    <!-- <a href="cadastro.html" class="btn btn-primary my-2 my-lg-0">Cadastre-se</a> -->
                 </div>
             </div>
         </nav>
@@ -95,102 +102,78 @@
 
     <!-- Conteúdo principal da página -->
     <main id="main-content" class="main-content">
-        <!-- ID para o link "Pular para o conteúdo" -->
         <div class="container">
-            <!-- Container para centralizar e limitar largura -->
 
             <h1 class="text-center">Faça seu Cadastro</h1>
-            <!-- Título principal da página -->
-            <p class="text-center">Para receber dicas e novidades sobre descarte consciente!</p>
-            <!-- Texto introdutório -->
+            <p class="text-center">Para receber informativos com dicas e novidades sobre descarte consciente!</p>
+
+            <!-- Container para Mensagens Flash (será preenchido via JavaScript) -->
+            <div id="flashMessageContainer"></div>
 
             <!-- Formulário de Cadastro -->
+            <!-- action aponta para o script PHP que processa os dados -->
             <form id="formularioInscricao" method="POST" action="cadastrar_usuario.php" aria-labelledby="titulo-cadastro">
-                <!-- aria-labelledby associa o título ao formulário -->
-                <h2 id="titulo-cadastro" class="sr-only">Formulário de Cadastro</h2> <!-- Título oculto para leitores de tela -->
+                <h2 id="titulo-cadastro" class="sr-only">Formulário de Cadastro</h2>
 
-                <!-- Campo Nome Completo -->
+                <!-- Campo Oculto para Token CSRF (preenchido via JavaScript) -->
+                <input type="hidden" name="csrf_token" id="csrfTokenInput" value="">
+
+                <!-- Campos do Formulário (Nome, Endereço, etc.) -->
+                <!-- Os valores (value="") serão preenchidos pelo JavaScript se houver dados de erro anteriores -->
                 <div class="form-group">
                     <label for="inputNome">Nome Completo:</label>
-                    <!-- Label associado explicitamente ao input via 'for' -->
                     <input type="text" class="form-control" id="inputNome" name="inputNome" required
-                        aria-required="true" autocomplete="name">
-                    <!-- id adicionado, required e aria-required para acessibilidade, autocomplete para usabilidade -->
+                        aria-required="true" autocomplete="name" value="">
                 </div>
-
-                <!-- Campo Endereço -->
                 <div class="form-group">
                     <label for="inputEndereco">Endereço:</label>
                     <input type="text" class="form-control" id="inputEndereco" name="inputEndereco" required
-                        aria-required="true" autocomplete="street-address">
-                    <!-- id adicionado, required/aria-required, autocomplete -->
+                        aria-required="true" autocomplete="street-address" value="">
                 </div>
-
-                <!-- Campo Complemento -->
                 <div class="form-group">
                     <label for="inputComplemento">Complemento:</label>
                     <input type="text" class="form-control" id="inputComplemento" name="inputComplemento"
-                        autocomplete="address-line2">
-                    <!-- autocomplete adicionado -->
+                        autocomplete="address-line2" value="">
                 </div>
-
-                <!-- Campo CEP -->
                 <div class="form-group">
                     <label for="inputCEP">CEP:</label>
                     <input type="text" class="form-control" id="inputCEP" name="inputCEP" required aria-required="true"
-                        pattern="\d{5}-?\d{3}" title="Digite o CEP no formato 00000-000 ou 00000000" autocomplete="postal-code">
-                    <!-- pattern para validação básica, title para dica, autocomplete -->
+                        pattern="\d{5}-?\d{3}" title="Digite o CEP no formato 00000-000 ou 00000000" autocomplete="postal-code" value="">
                 </div>
-
-                <!-- Campo Bairro -->
                 <div class="form-group">
                     <label for="inputBairro">Bairro:</label>
-                    <input type="text" class="form-control" id="inputBairro" name="inputBairro" autocomplete="address-level2">
-                    <!-- autocomplete adicionado (pode variar dependendo da granularidade desejada) -->
+                    <input type="text" class="form-control" id="inputBairro" name="inputBairro" autocomplete="address-level2" value="">
                 </div>
-
-                <!-- Campo E-mail -->
                 <div class="form-group">
                     <label for="inputEmail">E-mail:</label>
                     <input type="email" class="form-control" id="inputEmail" name="inputEmail" required
-                        aria-required="true" autocomplete="email">
-                    <!-- id adicionado, required/aria-required, autocomplete -->
+                        aria-required="true" autocomplete="email" value="">
                 </div>
-
-                <!-- Campo Senha -->
                 <div class="form-group">
                     <label for="inputSenha">Senha:</label>
                     <div class="input-group">
-                        <!-- input-group para agrupar input e botão de toggle -->
                         <input type="password" class="form-control" id="inputSenha" name="inputSenha" required
-                            aria-required="true" autocomplete="new-password">
-                        <!-- autocomplete="new-password" para sugerir criação de senha -->
+                            aria-required="true" autocomplete="new-password" aria-describedby="senhaHelp senhaInfo">
+                            <!-- aria-describedby inclui as duas descrições para acessibilidade -->
                         <div class="input-group-append">
-                            <!-- Botão para mostrar/ocultar senha -->
                             <button type="button" class="btn btn-outline-secondary" id="togglePassword"
                                 aria-label="Mostrar senha como texto" aria-pressed="false">
-                                <!-- Usando <button> para semântica e acessibilidade -->
-                                <!-- aria-label descreve a ação, aria-pressed indica o estado -->
                                 <i class="bi bi-eye-fill" aria-hidden="true"></i>
-                                <!-- Ícone visual, aria-hidden para não ser lido por leitores de tela -->
                             </button>
                         </div>
                     </div>
+                    <small id="senhaHelp" class="form-text text-muted">A senha deve ter no mínimo 8 caracteres.</small>
+                    <!-- Texto explicativo sobre a senha, adicionado conforme solicitado -->
+                    <small id="senhaInfo" class="form-text text-info">Esta senha será usada para acessar os informativos enviados para o seu e-mail. Guarde-a num local seguro!</small>
                 </div>
-
-                <!-- Campo de Autorização (Checkbox) -->
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="autorizacaoCheck" name="autorizacaoCheck" required
                         aria-required="true">
-                    <!-- name adicionado, required/aria-required -->
-                    <label class="form-check-label" for="autorizacaoCheck">Autorizo o uso das informações fornecidas para
-                        recebimento de dicas e novidades.</label>
-                    <!-- Texto do label mais claro -->
+                    <label class="form-check-label" for="autorizacaoCheck">Autorizo o uso das informações fornecidas para recebimento de dicas e novidades.</label>
                 </div>
 
                 <!-- Botão de Envio -->
-                <button type="submit" class="btn btn-primary btn-lg">Enviar Cadastro</button>
-                <!-- btn-lg para maior destaque, texto mais descritivo -->
+                <button type="submit" class="btn btn-success btn-lg">Enviar Cadastro</button>
             </form>
             <!-- Fim do formulário -->
 
@@ -205,57 +188,162 @@
     <!-- Rodapé (reutilizando a estrutura padrão) -->
     <footer>
         &copy; 2025 Cadê o Ecoponto.
-        <!-- Ano atualizado -->
     </footer>
     <!-- Fim do rodapé -->
 
     <!-- Scripts JavaScript -->
-    <!-- jQuery (necessário para Bootstrap JS e script de toggle) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Popper.js (dependência Bootstrap) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <!-- Script para funcionalidade de mostrar/esconder senha -->
+    <!-- Script Principal para Segurança e Feedback via AJAX -->
     <script>
-        // Executa quando o documento HTML estiver completamente carregado e pronto
-        $(document).ready(function () {
-            // Seleciona o botão de toggle da senha
+        // Executa este script quando o DOM (estrutura HTML) estiver completamente carregado.
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleciona os elementos HTML importantes
+            const flashContainer = document.getElementById("flashMessageContainer");
+            const csrfInput = document.getElementById("csrfTokenInput");
+            const form = document.getElementById("formularioInscricao");
+            const submitButton = form.querySelector("button[type=\'submit\']"); // Garante que o botão correto é selecionado
+
+            /**
+             * Lida com erros na requisição AJAX para get_security_data.php.
+             * Exibe um aviso em VERMELHO (alert-danger) sem bloquear o formulário.
+             * @param {Error} error O objeto de erro.
+             */
+            function handleFetchError(error) {
+                console.error("Erro ao buscar dados de segurança:", error);
+                if (flashContainer) {
+                    // Usa alert-danger para o aviso de falha de carregamento, conforme solicitado.
+                    flashContainer.innerHTML = `
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Erro:</strong> Não foi possível carregar os dados de segurança necessários. O envio pode falhar.
+                            Por favor, tente recarregar a página ou contacte o suporte se o problema persistir.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    `;
+                }
+            }
+
+            /**
+             * Processa os dados recebidos de get_security_data.php.
+             * Insere o token CSRF, exibe mensagens flash e repopula o formulário.
+             * @param {object} data Objeto JSON com { csrf_token, flash_message, form_data }.
+             */
+            function processSecurityData(data) {
+                // 1. Insere o Token CSRF
+                if (csrfInput && data.csrf_token) {
+                    csrfInput.value = data.csrf_token;
+                } else {
+                    console.warn("Token CSRF não recebido.");
+                    if (flashContainer) {
+                        // Adiciona um aviso (amarelo) se o token especificamente não for carregado
+                        const tokenWarningDiv = document.createElement('div');
+                        tokenWarningDiv.className = "alert alert-warning alert-dismissible fade show";
+                        tokenWarningDiv.setAttribute('role', 'alert');
+                        tokenWarningDiv.innerHTML = `
+                            Aviso: Falha ao carregar token de segurança. O envio pode não ser processado.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        `;
+                        flashContainer.appendChild(tokenWarningDiv);
+                    }
+                }
+
+                // 2. Exibe Mensagem Flash (se existir)
+                if (flashContainer && data.flash_message) {
+                    const messageData = data.flash_message;
+                    let alertType = "alert-info"; // Padrão
+                    if (messageData.type === "success") alertType = "alert-success"; // Verde
+                    else if (messageData.type === "error") alertType = "alert-danger"; // Vermelho
+                    else if (messageData.type === "warning") alertType = "alert-warning"; // Amarelo
+
+                    const alertDiv = document.createElement("div");
+                    alertDiv.className = `alert ${alertType} alert-dismissible fade show`;
+                    alertDiv.setAttribute("role", "alert");
+                    alertDiv.innerHTML = `
+                        ${messageData.message}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    `;
+                    flashContainer.appendChild(alertDiv);
+                }
+
+                // 3. Repopula Formulário (se houver dados de erro anteriores)
+                if (data.form_data) {
+                    const formData = data.form_data;
+                    for (const key in formData) {
+                        const inputElement = form.querySelector(`[name="${key}"]`);
+                        if (inputElement) {
+                            if (inputElement.type === "checkbox") {
+                                inputElement.checked = formData[key] === "on" || formData[key] === "1" || formData[key] === true;
+                            } else if (inputElement.type !== "password") {
+                                // Preenche o valor, exceto para senha
+                                inputElement.value = formData[key];
+                            }
+                        }
+                    }
+                }
+            }
+
+            // --- Requisição AJAX (Fetch API) para buscar dados de segurança --- 
+            fetch("get_security_data.php") // Faz a chamada para o script PHP
+                .then((response) => {
+                    if (!response.ok) {
+                        // Se a resposta não for OK (ex: 404, 500), lança um erro
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json(); // Converte a resposta em JSON
+                })
+                .then((data) => {
+                    // Se a requisição e o JSON funcionarem, processa os dados
+                    processSecurityData(data);
+                })
+                .catch((error) => {
+                    // Se houver erro na rede ou no JSON, chama a função de tratamento
+                    handleFetchError(error);
+                });
+
+            // --- Script existente para mostrar/esconder senha (jQuery) --- 
             const toggleButton = $("#togglePassword");
-            // Seleciona o campo de input da senha
             const passwordInput = $("#inputSenha");
-            // Seleciona o ícone dentro do botão
             const icon = toggleButton.find("i");
 
-            // Adiciona um evento de clique ao botão
             toggleButton.click(function () {
-                // Verifica qual o tipo atual do campo de senha
                 if (passwordInput.attr("type") === "password") {
-                    // Se for 'password', muda para 'text' para mostrar a senha
                     passwordInput.attr("type", "text");
-                    // Muda o ícone para o olho cortado (senha visível)
                     icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
-                    // Atualiza o aria-label e aria-pressed para acessibilidade
                     toggleButton.attr("aria-label", "Ocultar senha");
                     toggleButton.attr("aria-pressed", "true");
                 } else {
-                    // Se for 'text', muda de volta para 'password' para ocultar a senha
                     passwordInput.attr("type", "password");
-                    // Muda o ícone de volta para o olho normal (senha oculta)
                     icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
-                    // Atualiza o aria-label e aria-pressed para acessibilidade
                     toggleButton.attr("aria-label", "Mostrar senha como texto");
                     toggleButton.attr("aria-pressed", "false");
                 }
             });
+
+            // --- NOVO: Desativar botão ao submeter o formulário --- 
+            // Adiciona um listener ao evento 'submit' do formulário
+            if (form && submitButton) {
+                form.addEventListener('submit', function() {
+                    // Desativa o botão imediatamente para prevenir cliques múltiplos
+                    submitButton.disabled = true;
+                    // Opcional: Muda o texto do botão para dar feedback visual ao utilizador
+                    submitButton.textContent = 'A enviar...'; 
+                });
+            }
+
         });
     </script>
 
 </body>
 
 </html>
-

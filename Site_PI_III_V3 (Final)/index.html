@@ -29,7 +29,6 @@
     <!-- Carrega a biblioteca jQuery de um CDN -->
 
     <!-- Estilos CSS embutidos (inline) específicos para esta página -->
-    <!-- Embora funcional, a melhor prática seria mover esses estilos para o arquivo style.css para melhor organização e manutenção -->
     <style>
         /* Estilo para o link "Pular para o conteúdo" (Melhoria de Acessibilidade) */
         /* Este link é oculto visualmente por padrão, mas se torna visível quando recebe foco (navegação por teclado) */
@@ -89,23 +88,6 @@
             min-height: 100vh; /* Altura mínima de 100% da viewport (definido em style.css) */
             padding-top: 70px; /* Espaçamento no topo para header fixo (definido em style.css) */
             padding-bottom: 60px; /* Espaçamento no rodapé para footer fixo (definido em style.css) */
-        }
-
-        /* Estilo para a marca d'água de fundo */
-        /* Controlado por style.css, esta regra aqui é redundante */
-        .watermark {
-            position: fixed; /* Posição fixa */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Não interfere com interações */
-            background-image: url("imagens/Logo.png"); /* Imagem da logo */
-            background-size: contain; /* Ajusta tamanho */
-            background-repeat: no-repeat; /* Não repete */
-            background-position: center; /* Centraliza */
-            opacity: 0.08; /* Baixa opacidade */
-            z-index: -1; /* Fica atrás do conteúdo */
         }
 
         /* Estilo para o cabeçalho (<header>) */
@@ -189,7 +171,6 @@
         }
 
         /* Estilo para o rodapé (<footer>) */
-        /* MODIFICADO: A cor de fundo principal é definida em style.css (#000000). Esta regra pode ser removida ou ajustada. */
         footer {
             /* background-color: #333; */ /* Cor original comentada, prevalece a de style.css */
 
@@ -317,7 +298,7 @@
                         <!-- 'allow' especifica permissões para o iframe -->
                         <!-- 'allowfullscreen' permite que o vídeo seja exibido em tela cheia -->
                     </iframe>
-                    <!-- O iframe duplicado foi removido -->
+                    
                 </div>
                 <!-- Fim do container do vídeo -->
 
@@ -339,7 +320,6 @@
     <div class="watermark"></div>
 
     <!-- Rodapé da página -->
-    <!-- MODIFICADO (em style.css): Cor de fundo alterada para #000000 -->
     <footer>
         &copy; 2025 Cadê o Ecoponto.
         <!-- Informação de copyright. O ano pode ser atualizado dinamicamente se necessário -->
@@ -355,11 +335,6 @@
     <!-- Bootstrap JS (Funcionalidades interativas do Bootstrap, como o menu responsivo) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <!-- Script personalizado (script.js) -->
-    <!-- Comentado aqui, pois as funcionalidades principais desta página (index.html) não parecem depender dele diretamente. -->
-    <!-- O script.js parece conter lógica para gráficos (Dados_Abertos.html) e possivelmente login/cadastro. -->
-    <!-- <script src="script.js"></script> -->
 
 </body>
 <!-- Fim do corpo da página -->

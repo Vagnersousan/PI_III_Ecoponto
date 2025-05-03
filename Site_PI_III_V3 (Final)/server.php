@@ -4,10 +4,6 @@
  * 
  * Este script age como um ponto de entrada único (ou um roteador muito básico)
  * para incluir diferentes páginas HTML com base em um parâmetro na URL.
- * 
- * ATENÇÃO: Este arquivo continha código duplicado e inseguro para cadastro,
- * que foi REMOVIDO. A lógica de cadastro deve ser tratada exclusivamente
- * pelo arquivo 'cadastrar_usuario.php'.
  */
 
 // --- Inclusão de Dependências --- 
@@ -59,7 +55,6 @@ if (isset($_GET['page'])) {
         
         // Por simplicidade, apenas voltamos para a página padrão.
         $page_to_include = $default_page;
-        // Considerar logar a tentativa de acesso inválido.
         error_log("Tentativa de acesso a página inválida ou inexistente: " . $requested_page);
     }
 }
@@ -68,16 +63,6 @@ if (isset($_GET['page'])) {
 // Inclui o arquivo HTML final determinado pela lógica de roteamento.
 include $page_to_include;
 
-// --- Código Removido --- 
-/*
-O seguinte bloco de código foi removido por ser uma duplicação 
-da funcionalidade de 'cadastrar_usuario.php' e por usar práticas inseguras 
-(mysqli_* em vez de PDO consistente, falta de prepared statements - vulnerável a SQL Injection).
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // ... (código de cadastro inseguro removido) ...
-}
-*/
-
+// --- Fim do Script ---
 ?>
 
